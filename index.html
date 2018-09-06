@@ -242,7 +242,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签<span class="badge">3</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签<span class="badge">22</span></a>
   </li>
         
         
@@ -250,7 +250,7 @@
           
           <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类<span class="badge">1</span></a>
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类<span class="badge">5</span></a>
   </li>
         
         
@@ -258,7 +258,15 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档<span class="badge">2</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档<span class="badge">7</span></a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-read">
+    <a href="/read/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br />阅读</a>
   </li>
 
       
@@ -309,7 +317,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dolphin836.github.io/2018/09/04/branch-checkout-merge/">
+    <link itemprop="mainEntityOfPage" href="https://dolphin836.github.io/2018/08/25/branch/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="dolphin">
@@ -328,7 +336,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/04/branch-checkout-merge/" itemprop="url">
+                <a class="post-title-link" href="/2018/08/25/branch/" itemprop="url">
                   分支管理 - Branch & Checkout & Merge
                 </a>
               
@@ -355,12 +363,24 @@
                 
               
 
-              <time title="创建时间：2018-09-04 15:30:32 / 修改时间：15:50:51" itemprop="dateCreated datePublished" datetime="2018-09-04T15:30:32+08:00">2018-09-04</time>
+              <time title="创建时间：2018-08-25 12:00:00" itemprop="dateCreated datePublished" datetime="2018-08-25T12:00:00+08:00">2018-08-25</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-09-06 10:21:48" itemprop="dateModified" datetime="2018-09-06T10:21:48+08:00">2018-09-06</time>
               
             
           </span>
@@ -413,7 +433,54 @@
       
         
           
-            <h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">$ git branch # 列出本地分支，* 标识出当前分支</span><br><span class="line"></span><br><span class="line">$ git branch -r # 列出远程分支</span><br><span class="line"></span><br><span class="line">$ git branch -a # 列出本地和远程分支</span><br><span class="line"></span><br><span class="line">$ git branch branch_name # 创建本地分支</span><br><span class="line"></span><br><span class="line">$ git branch -d branch_name # 删除分支，当分支还有未 merge 的 commit 时会失败</span><br><span class="line"></span><br><span class="line">$ git branch -D branch_name # 强制删除分支</span><br><span class="line"></span><br><span class="line">$ git branch -vv # 查看本地分支对应的远程分支</span><br><span class="line"></span><br><span class="line">$ git branch -m old_branch_name new_branch_name # 重命名分支</span><br><span class="line"></span><br><span class="line">$ git checkout -b branch_name # 创建分支并切换到新分支</span><br><span class="line"></span><br><span class="line">$ git checkout -b branch_name origin/branch_name # 创建分支并切换到新分支并关联远程分支</span><br><span class="line"></span><br><span class="line">$ git checkout branch_name # 切换分支</span><br><span class="line"></span><br><span class="line">$ git merge branch_name # 合并分支：先切换到目标分支，例如要将 BUG 修复分支 hotfix-001 合并到 master 分支，需要先切换到 master 分支，然后执行 git merge hotfix-001</span><br></pre></td></tr></table></figure>
+            <h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>列出本地分支，* 标识出当前分支</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -r</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>列出远程分支</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -a</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>列出本地和远程分支</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch branch_name</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>创建本地分支</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -d branch_name</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>删除分支，当分支还有未 <code>merge</code> 的 <code>commit</code> 时会失败</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -D branch_name</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>强制删除分支</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -vv</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>查看本地分支对应的远程分支</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -m old_branch_name new_branch_name</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>重命名分支</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -b branch_name</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>创建分支并切换到新分支</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -b branch_name origin/branch_name</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>创建分支并切换到新分支并关联远程分支</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout branch_name</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>切换分支</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git merge branch_name</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>合并分支：先切换到目标分支，例如要将 <code>BUG</code> 修复分支 <code>hotfix-001</code> 合并到 <code>master</code> 分支，需要先切换到 <code>master</code> 分支，然后执行 <code>git merge hotfix-001</code></p>
+</blockquote>
 
           
         
@@ -467,7 +534,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dolphin836.github.io/2018/08/15/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://dolphin836.github.io/2018/08/11/slim-jwt/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="dolphin">
@@ -486,8 +553,8 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/08/15/hello-world/" itemprop="url">
-                  Hello World
+                <a class="post-title-link" href="/2018/08/11/slim-jwt/" itemprop="url">
+                  JSON Web Tokens 在 Slim Framework 中的使用
                 </a>
               
             
@@ -513,12 +580,46 @@
                 
               
 
-              <time title="创建时间：2018-08-15 13:36:52" itemprop="dateCreated datePublished" datetime="2018-08-15T13:36:52+08:00">2018-08-15</time>
+              <time title="创建时间：2018-08-11 09:56:41" itemprop="dateCreated datePublished" datetime="2018-08-11T09:56:41+08:00">2018-08-11</time>
             
 
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-09-06 10:33:23" itemprop="dateModified" datetime="2018-09-06T10:33:23+08:00">2018-09-06</time>
+              
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/PHP/" itemprop="url" rel="index"><span itemprop="name">PHP</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -549,15 +650,986 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+            <p>如果你还不了解 <code>JSON Web Token</code>（简称 JWT）是什么，有什么用途，常见的应用场景是什么，基本原理是什么，请先阅读 <a href="/article/2017/06/14/152300.html">JSON Web Tokens 是什么？</a> 学习相关知识。</p>
+<p>在 <code>Slim Framework</code> 中，使用中间件引入 <code>JWT</code> 机制是最合适的。我们这里使用的是 <a href="https://github.com/tuupola/slim-jwt-auth" target="_blank" rel="noopener">Slim-jwt-auth</a> 项目，这个项目的基础是 <a href="https://github.com/firebase/php-jwt" target="_blank" rel="noopener">php-jwt</a> 项目，使用前请阅读这两个项目的相关文档。</p>
+<h3 id="配置中间件"><a href="#配置中间件" class="headerlink" title="配置中间件"></a>配置中间件</h3><p>安装 Slim-jwt-auth 后在 <code>Slim</code> 中按如下方式引入</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * Slim JWT 身份验证中间件</span></span><br><span class="line"><span class="comment"> * https://github.com/tuupola/slim-jwt-auth</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 参数说明</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * cookie      ：使用 cookie 存储 Token，此参数设置 cookie 的名称</span></span><br><span class="line"><span class="comment"> * secure      ：是否使用 HTTPS 验证</span></span><br><span class="line"><span class="comment"> * relaxed     ：不进行 HTTPS 验证的域名</span></span><br><span class="line"><span class="comment"> * secret      ：密钥</span></span><br><span class="line"><span class="comment"> * path        : 需要进行身份验证的路径，设置为 '/' 表示验证全部的路径</span></span><br><span class="line"><span class="comment"> * passthrough ：不需要进行身份验证的路径</span></span><br><span class="line"><span class="comment"> * attribute   ：在 Request 中的标志，可通过 $request-&gt;getAttribute('') 读取</span></span><br><span class="line"><span class="comment"> * environment ：</span></span><br><span class="line"><span class="comment"> * header      ：在 header 中的标志，默认是 Authorization，配合 environment 设置一起使用</span></span><br><span class="line"><span class="comment"> * error       : 未能通过验证时的回调函数</span></span><br><span class="line"><span class="comment"> * callback    : 通过身份验证时的回调函数</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">$app-&gt;add(</span><br><span class="line">    <span class="keyword">new</span> \Slim\Middleware\JwtAuthentication(</span><br><span class="line">        [</span><br><span class="line">          <span class="string">"attribute"</span> =&gt; <span class="string">"JWT_Auth"</span>,</span><br><span class="line">               <span class="string">"path"</span> =&gt; <span class="string">"/v1/user"</span>,</span><br><span class="line">        <span class="string">"passthrough"</span> =&gt; <span class="string">"/token"</span>,</span><br><span class="line">        <span class="string">"environment"</span> =&gt; [<span class="string">"HTTP_JWT_AUTH"</span>, <span class="string">"REDIRECT_HTTP_JWT_AUTH"</span>],</span><br><span class="line">             <span class="string">"header"</span> =&gt; <span class="string">"JWT_Auth"</span>,</span><br><span class="line">             <span class="string">"secret"</span> =&gt; getenv(<span class="string">"JWT_SECRET"</span>),</span><br><span class="line">             <span class="string">"secure"</span> =&gt; <span class="keyword">false</span>,</span><br><span class="line">              <span class="string">"error"</span> =&gt; <span class="function"><span class="keyword">function</span> <span class="params">($request, $response, $args)</span> <span class="title">use</span> <span class="params">($container)</span> </span>&#123;</span><br><span class="line">                    $json[<span class="string">'code'</span>] = <span class="number">-1</span>;</span><br><span class="line">                    $json[<span class="string">'note'</span>] = $args[<span class="string">'message'</span>];</span><br><span class="line">                    $json[<span class="string">'help'</span>] = <span class="string">'http://api.app.com'</span>;</span><br><span class="line">                    </span><br><span class="line">                    $container-&gt;log-&gt;write($args[<span class="string">'message'</span>]);</span><br><span class="line">                    </span><br><span class="line">                    <span class="keyword">return</span> $response-&gt;withStatus(<span class="number">401</span>)</span><br><span class="line">                                    -&gt;withHeader(<span class="string">"Content-Type"</span>, <span class="string">"application/json"</span>)</span><br><span class="line">                                    -&gt;write(json_encode($json, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT));</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="string">"callback"</span> =&gt; <span class="function"><span class="keyword">function</span> <span class="params">($request, $response, $args)</span> <span class="title">use</span> <span class="params">($container)</span> </span>&#123;</span><br><span class="line">                    $container-&gt;log-&gt;write($args);</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    )</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>主要就是要理解这里面的各种设置项，可仔细阅读 <code>Slim-jwt-auth</code> 的说明文档。我这里使用的自己写的日志类库来记录日志，也可以参考官方的做法，使用<code>Monolog\Logger</code> 来实现。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> <span class="title">Monolog</span>\<span class="title">Logger</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">Monolog</span>\<span class="title">Handler</span>\<span class="title">RotatingFileHandler</span>;</span><br><span class="line"></span><br><span class="line">$logger   = <span class="keyword">new</span> Logger(<span class="string">"slim"</span>);</span><br><span class="line">$rotating = <span class="keyword">new</span> RotatingFileHandler(<span class="keyword">__DIR__</span> . <span class="string">"/logs/slim.log"</span>, <span class="number">0</span>, Logger::DEBUG);</span><br><span class="line">$logger-&gt;pushHandler($rotating);</span><br><span class="line"></span><br><span class="line">$app-&gt;add(</span><br><span class="line">    <span class="keyword">new</span> \Slim\Middleware\JwtAuthentication(</span><br><span class="line">        [</span><br><span class="line">          <span class="string">"attribute"</span> =&gt; <span class="string">"JWT_Auth"</span>,</span><br><span class="line">               <span class="string">"path"</span> =&gt; <span class="string">"/v1/user"</span>,</span><br><span class="line">        <span class="string">"passthrough"</span> =&gt; <span class="string">"/token"</span>,</span><br><span class="line">             <span class="string">"logger"</span> =&gt; $logger</span><br><span class="line">        ]</span><br><span class="line">    )</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>当身份验证未通过时会自动将错误信息写入日志文件，也就是错误回调中参数中的 <code>message</code> 中的内容。</p>
+<h3 id="生成-Token"><a href="#生成-Token" class="headerlink" title="生成 Token"></a>生成 Token</h3><p>当用户提供 <code>username</code> 和 <code>password</code> 并通过验证后，服务器端需要为其生成一个 <code>JSON Web Token</code>，并返回给客户端，客户端将其存在本地。</p>
+<p>无论何时想要访问一个受保护的路由或资源，客户端应该随请求一起发送　<code>JSON Web Token</code>。<code>JSON Web Token</code> 通常在 <code>Authentication HTTP</code> 头部中，使用 <code>Bearer</code> 格式（<code>schema</code>）存放，<code>HTTP</code> 头部的内容通常是这样的格式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Authorization: Bearer &lt;token&gt;</span><br></pre></td></tr></table></figure>
+<p>下面是在 <code>Slim</code> 中生成 <code>JSON Web Token</code> 的例子：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">index</span><span class="params">($request, $response, $args)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    $data = <span class="keyword">array</span>(</span><br><span class="line">        <span class="string">"iss"</span> =&gt; <span class="string">"https://auth.medlande.com/v1"</span>, <span class="comment">//签发者</span></span><br><span class="line">        <span class="string">"sub"</span> =&gt; <span class="string">"Auth"</span>,       <span class="comment">// 主题</span></span><br><span class="line">        <span class="string">"aud"</span> =&gt; <span class="string">'1'</span>,          <span class="comment">// 受众</span></span><br><span class="line">        <span class="string">"iat"</span> =&gt; time(),       <span class="comment">// 签发时间</span></span><br><span class="line">        <span class="string">"nbf"</span> =&gt; time(),       <span class="comment">// 启用时间</span></span><br><span class="line">        <span class="string">"exp"</span> =&gt; time() + <span class="number">3600</span> <span class="comment">// 过期时间</span></span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    $token = JWT::encode($data, getenv(<span class="string">"JWT_SECRET"</span>));</span><br><span class="line"></span><br><span class="line">    $json[<span class="string">'code'</span>] = <span class="number">0</span>;</span><br><span class="line">    $json[<span class="string">'note'</span>] = <span class="string">'Success.'</span>;</span><br><span class="line">    $json[<span class="string">'data'</span>] = <span class="keyword">array</span>(<span class="string">'token'</span> =&gt; $token);</span><br><span class="line">    $json[<span class="string">'help'</span>] = <span class="string">'http://api.hbdx.com'</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// setcookie("JWT_Auth", $token, time() + 7200);</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 前台得到 Token 后，可以写入 cookie，或者 HTTP HEADER，配合 middleware 的设置来做</span></span><br><span class="line">    <span class="keyword">return</span> $response-&gt;withStatus(<span class="number">200</span>)</span><br><span class="line">        -&gt;withHeader(<span class="string">"Content-Type"</span>, <span class="string">"application/json"</span>)</span><br><span class="line">        -&gt;write(json_encode($json, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>　　输出的结果为：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    code: 0,</span><br><span class="line">    note: "Success.",</span><br><span class="line">    data: &#123;</span><br><span class="line">        token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXV0aC5tZWRsYW5kZS5jb21cL3YxIiwic3ViIjoiQXV0aCIsImF1ZCI6IjEiLCJpYXQiOjE1MDI0MzY5ODAsIm5iZiI6MTUwMjQzNjk4MCwiZXhwIjoxNTAyNDQwNTgwfQ.FboOTNextlqK3-7LHyje6-QmlkqhjA-EYnSj-wsE4EM"</span><br><span class="line">    &#125;,</span><br><span class="line">    help: "http://api.hbdx.com"</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="客户端请求"><a href="#客户端请求" class="headerlink" title="客户端请求"></a>客户端请求</h3><p>我这里使用 <code>PHP</code> 来做模拟请求，使用的是 <code>Guzzle Http</code> 请求库，代码如下：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">$server = <span class="string">'http://api.hbdx.cc/v1'</span>;</span><br><span class="line"></span><br><span class="line">$client = <span class="keyword">new</span> \GuzzleHttp\Client();</span><br><span class="line">$res    = $client-&gt;request(<span class="string">'GET'</span>, $server . <span class="string">'/token'</span>);</span><br><span class="line">$json   = $res-&gt;getBody();</span><br><span class="line">$data   = json_decode($json);</span><br><span class="line">$token  = $data-&gt;data-&gt;token;</span><br><span class="line"></span><br><span class="line"><span class="comment">// var_dump($token);</span></span><br><span class="line"></span><br><span class="line">$res    = $client-&gt;request(<span class="string">'GET'</span>, $server . <span class="string">'/user/1'</span>, [</span><br><span class="line">    <span class="string">'headers'</span> =&gt; [</span><br><span class="line">        <span class="string">'JWT_Auth'</span> =&gt; <span class="string">'Bearer '</span> . $token</span><br><span class="line">    ]</span><br><span class="line">]);</span><br><span class="line"></span><br><span class="line">$json   = $res-&gt;getBody();</span><br><span class="line"></span><br><span class="line"><span class="keyword">echo</span> $json;</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">首先，我们通过 `token` 接口向服务器端请求了一个 `JSON Web Token`，在实际应用中就是登录接口。`user` 接口是一个受保护资源，需要身份验证，我们在 `HTTP Header` 中按照 `JSON Web Token` 要求的格式添加 `Token`。注意，这里使用的是 `JWT_Auth` 字段，这是因为我们在中间件的配置中进行了设置：</span><br><span class="line"></span><br><span class="line">```php</span><br><span class="line"><span class="string">"environment"</span> =&gt; [<span class="string">"HTTP_JWT_AUTH"</span>, <span class="string">"REDIRECT_HTTP_JWT_AUTH"</span>],</span><br><span class="line">     <span class="string">"header"</span> =&gt; <span class="string">"JWT_Auth"</span></span><br></pre></td></tr></table></figure>
+<p>默认使用 <code>Authorization</code> 就可以了。</p>
+<h3 id="解析-Payload"><a href="#解析-Payload" class="headerlink" title="解析 Payload"></a>解析 Payload</h3><p>请求通过 <code>JSON Web Token</code> 验证后，在 <code>Slim</code> 中我们可以通过</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$auth = $request-&gt;getAttribute(<span class="string">"JWT_Auth"</span>);</span><br></pre></td></tr></table></figure>
+<p>来获取 <code>Payload</code> 信息，也就是在生成 <code>JSON Web Token</code> 时设置的内容。<code>JWT_Auth</code> 是在中间件中设置的 <code>attribute</code> 属性，从中取出用户标识，取出用户数据，返回给客户端。</p>
+<p>结束。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://dolphin836.github.io/2018/06/29/quill-js/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="dolphin">
+      <meta itemprop="description" content="个人博客">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="海兵大侠">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/29/quill-js/" itemprop="url">
+                  Quill.js 强大优雅的富文本编辑器介绍
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-06-29 10:04:32" itemprop="dateCreated datePublished" datetime="2018-06-29T10:04:32+08:00">2018-06-29</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-09-06 10:35:15" itemprop="dateModified" datetime="2018-09-06T10:35:15+08:00">2018-09-06</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/前端/" itemprop="url" rel="index"><span itemprop="name">前端</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="../images/quill.jpg" alt="Quill.js"></p>
+<p><a href="https://quilljs.com/" title="官网" target="_blank" rel="noopener">官网</a></p>
+<p><a href="https://github.com/quilljs/quill" title="Github 主页" target="_blank" rel="noopener">Github 主页</a></p>
+<p><a href="https://quilljs.com/playground/" title="Demo" target="_blank" rel="noopener">Demo</a></p>
+<p><a href="https://quilljs.com/docs/quickstart/" title="文档" target="_blank" rel="noopener">文档</a></p>
+<p>在 <code>Github</code> 上搜索编辑器的时候发现了 <code>Quill.js</code> 这个项目，简单的浏览了它的官网，第一感觉就是文档写的非常好。</p>
+<p>立马动手按照文档写了一个简单的 <code>Demo</code>，对于一个编辑器我主要关心以下几点：</p>
+<ul>
+<li>UI 颜值既正义</li>
+<li>自定义功能</li>
+<li>扩展性</li>
+</ul>
+<p>我验证了以下几个常见的需求：</p>
+<ul>
+<li>个性化工具栏</li>
+<li>图片上传</li>
+<li>撤销重做</li>
+</ul>
+<p>官网文档都详细介绍了这三个需求的实现方式。</p>
+<p>下面是我的 <code>Demo</code>，需要注意的是 撤销/重做 是通过 <code>history</code> 这个 <code>module</code> 实现的。</p>
+<p>在 <code>toolbarOptions</code> 中添加了 <code>undo</code> 和 <code>redo</code> 选项，然后通过 <code>Quill</code> 提供的 <code>className</code> 设置它们的样式，我直接给它们设置了一个背景图片。</p>
+<p>HTML</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"quill"</span> <span class="attr">class</span>=<span class="string">"quill"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"release"</span>&gt;</span>发布<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">id</span>=<span class="string">"file"</span> <span class="attr">style</span>=<span class="string">"display:none;"</span> <span class="attr">multiple</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>CSS</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.quill</span> &#123;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">375px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ql-toolbar</span> <span class="selector-class">.ql-formats</span> <span class="selector-class">.ql-undo</span> &#123;</span><br><span class="line">	<span class="attribute">background</span>: <span class="built_in">url</span>(./dist/image/undo.svg) no-repeat;</span><br><span class="line">	<span class="attribute">background-size</span>: <span class="number">18px</span> <span class="number">18px</span>;</span><br><span class="line">	<span class="attribute">background-position</span>: <span class="number">3px</span> <span class="number">3px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ql-toolbar</span> <span class="selector-class">.ql-formats</span> <span class="selector-class">.ql-redo</span> &#123;</span><br><span class="line">	<span class="attribute">background</span>: <span class="built_in">url</span>(./dist/image/redo.svg) no-repeat;</span><br><span class="line">	<span class="attribute">background-size</span>: <span class="number">18px</span> <span class="number">18px</span>;</span><br><span class="line">	<span class="attribute">background-position</span>: <span class="number">3px</span> <span class="number">3px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>JS</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> toolbarOptions = [</span><br><span class="line">	[&#123; <span class="string">'header'</span>: <span class="number">1</span> &#125;],</span><br><span class="line">	[&#123; <span class="string">'header'</span>: <span class="number">2</span> &#125;],</span><br><span class="line">	[<span class="string">'bold'</span>],</span><br><span class="line">	[<span class="string">'italic'</span>],</span><br><span class="line">	[<span class="string">'underline'</span>],</span><br><span class="line">	[<span class="string">'strike'</span>],</span><br><span class="line">	[<span class="string">'blockquote'</span>],</span><br><span class="line">	[&#123; <span class="string">'list'</span>: <span class="string">'ordered'</span>&#125;],</span><br><span class="line">	[&#123; <span class="string">'list'</span>: <span class="string">'bullet'</span> &#125;],</span><br><span class="line">	[&#123; <span class="string">'indent'</span>: <span class="string">'-1'</span>&#125;],</span><br><span class="line">	[&#123; <span class="string">'indent'</span>: <span class="string">'+1'</span> &#125;],</span><br><span class="line">	[&#123; <span class="string">'color'</span>: [] &#125;],</span><br><span class="line">	[&#123; <span class="string">'align'</span>: [] &#125;],</span><br><span class="line">	[<span class="string">'link'</span>],</span><br><span class="line">	[<span class="string">'image'</span>],</span><br><span class="line">	[<span class="string">'clean'</span>],</span><br><span class="line">	[<span class="string">'undo'</span>],</span><br><span class="line">	[<span class="string">'redo'</span>],</span><br><span class="line">];</span><br><span class="line">		</span><br><span class="line"><span class="keyword">var</span> options = &#123;</span><br><span class="line">	modules: &#123;</span><br><span class="line">		toolbar: toolbarOptions,</span><br><span class="line">		history</span><br><span class="line">	&#125;,</span><br><span class="line">	debug: <span class="string">'error'</span>,</span><br><span class="line">	theme: <span class="string">'snow'</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 初始化编辑器</span></span><br><span class="line"><span class="keyword">var</span> quill = <span class="keyword">new</span> Quill(<span class="string">'#quill'</span>, options);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> toolbar = quill.getModule(<span class="string">'toolbar'</span>);</span><br><span class="line"><span class="comment">// 选择图片</span></span><br><span class="line">toolbar.addHandler(<span class="string">'image'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="built_in">document</span>.getElementById(<span class="string">'file'</span>).click();</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 发布</span></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"release"</span>).onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> content = quill.getContents();</span><br><span class="line">	<span class="built_in">console</span>.log(content);</span><br><span class="line">	<span class="keyword">let</span> html = quill.container.firstChild.innerHTML;</span><br><span class="line">	<span class="built_in">console</span>.log(html);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 撤销</span></span><br><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">".ql-undo"</span>).addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	quill.history.undo();</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 重做</span></span><br><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">".ql-redo"</span>).addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	quill.history.redo();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>另外一点需要注意的就是 <code>Quill</code> 提供的 <code>getContents</code> 方法。它返回的是一个 <code>Delta</code> <code>对象，表示编辑器的内容。Delta</code> 本质上是 <code>JSON</code>，可以非常方便的进行个性化处理。`</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://dolphin836.github.io/2017/09/12/mysql-select/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="dolphin">
+      <meta itemprop="description" content="个人博客">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="海兵大侠">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/09/12/mysql-select/" itemprop="url">
+                  MYSQL 查询优化最佳实践
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2017-09-12 12:00:00" itemprop="dateCreated datePublished" datetime="2017-09-12T12:00:00+08:00">2017-09-12</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-09-06 10:24:08" itemprop="dateModified" datetime="2018-09-06T10:24:08+08:00">2018-09-06</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/MYSQL/" itemprop="url" rel="index"><span itemprop="name">MYSQL</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>由于系统的瓶颈大多出现在数据库层面，所以对数据库的操作需要提出一些开发原则，这些开发原则在前期可能会增加工作量，并且对系统性能的提升并不大，反而某些复杂语句可能会影响性能，但是在数据量急剧膨胀后，会带来性能上的极大提升，并且为 <code>SQL</code> 语句的调优，以及系统的拆分打下了良好的基础，开发人员需要严格遵守。</p>
+</blockquote>
+<ul>
+<li><p>应尽量避免在 <code>WHERE</code> 子句中使用 <code>!=</code> 或 <code>&lt;&gt;</code> 操作符，否则引擎将放弃使用索引而进行全表扫描</p>
+</li>
+<li><p>应尽量避免在 <code>WHERE</code> 子句中对字段进行 <code>NULL</code> 值判断，否则引擎将放弃使用索引而进行全表扫描。可以为每个字段都设置默认值，然后使用默认值判断。例如：</p>
+</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="string">`phone`</span> <span class="keyword">FROM</span> <span class="string">`user`</span> <span class="keyword">WHERE</span> <span class="string">`name`</span> <span class="keyword">IS</span> <span class="literal">NULL</span>;</span><br></pre></td></tr></table></figure>
+<p>可改为：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="string">`phone`</span> <span class="keyword">FROM</span> <span class="string">`user`</span> <span class="keyword">WHERE</span> <span class="string">`name`</span> = <span class="string">''</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>应尽量避免在 <code>WHERE</code> 子句中使用 <code>OR</code> 来连接条件，否则引擎将放弃使用索引而进行全表扫描。例如：</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="string">`name`</span> <span class="keyword">FROM</span> <span class="string">`user`</span> <span class="keyword">WHERE</span> <span class="string">`id`</span> = <span class="number">10</span> <span class="keyword">OR</span> <span class="string">`id`</span> = <span class="number">20</span>;</span><br></pre></td></tr></table></figure>
+<p>可改为：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="string">`name`</span> <span class="keyword">FROM</span> <span class="string">`user`</span> <span class="keyword">WHERE</span> <span class="string">`id`</span> = <span class="number">10</span></span><br><span class="line"><span class="keyword">UNION</span> ALL</span><br><span class="line"><span class="keyword">SELECT</span> <span class="string">`name`</span> <span class="keyword">FROM</span> <span class="string">`user`</span> <span class="keyword">WHERE</span> <span class="string">`id`</span> = <span class="number">20</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>检索禁止使用左模糊和全模糊，若要提高效率可以使用全文检索</p>
+</li>
+<li><p><code>IN</code> 和 <code>NOT</code> <code>IN</code> 操作能避免尽量避免，如果必须要用，需要仔细评估 <code>IN</code> 后面的集合元素数量，控制在 1000 以内。对于连续的值推荐使用 <code>BETWEEN</code></p>
+</li>
+<li><p>不要在 <code>WHERE</code> 子句的 <code>=</code> 左边进行函数、算术运算或其他表达式运算，否则引擎将可能无法正确使用索引</p>
+</li>
+<li><p>禁止使用存储过程、函数、触发器、外键约束</p>
+</li>
+<li><p>禁止两张表以上的关联查询。在数据量较大时，连表查询会严重拖慢数据库性能，将大 <code>SQL</code> 拆分成多个子 <code>SQL</code>，在程序中拼接数据</p>
+</li>
+<li><p>禁止使用 * 查询所有字段，只选择需要的字段，例如：</p>
+</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="string">`uuid`</span>, <span class="string">`name`</span>, <span class="string">`phone`</span> <span class="keyword">FROM</span> <span class="string">`user`</span> <span class="keyword">WHERE</span> <span class="string">`create_at`</span> &gt;= <span class="string">'2017-09-30'</span>;</span><br></pre></td></tr></table></figure>
+<p>需要哪些字段必须明确写明</p>
+<ul>
+<li>只查询一条记录的时候带上 <code>LIMIT 1</code>，例如：</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="string">`id`</span> <span class="keyword">FROM</span> <span class="string">`user`</span> <span class="keyword">WHERE</span> <span class="string">`phone`</span> = <span class="string">'152****0989'</span> <span class="keyword">LIMIT</span> <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://dolphin836.github.io/2017/08/04/mysql-table-design/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="dolphin">
+      <meta itemprop="description" content="个人博客">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="海兵大侠">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/04/mysql-table-design/" itemprop="url">
+                  MYSQL 表结构设计最佳实践
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2017-08-04 15:40:00" itemprop="dateCreated datePublished" datetime="2017-08-04T15:40:00+08:00">2017-08-04</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-09-06 10:26:05" itemprop="dateModified" datetime="2018-09-06T10:26:05+08:00">2018-09-06</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/MYSQL/" itemprop="url" rel="index"><span itemprop="name">MYSQL</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="命名规则"><a href="#命名规则" class="headerlink" title="命名规则"></a>命名规则</h4><ol>
+<li>表名、字段名只能使用小写字母、数字、下划线，尽量采用语义明确且合适的单词</li>
+<li>多个单词使用下划线下划线链接，且不超过 3 个，总长度不超过 30 个字符</li>
+<li>禁止使用 <code>SQL</code> 关键字，如 <code>desc</code>，<code>range</code>，<code>match</code> 等</li>
+<li>表名以名词或名词短语单数命名</li>
+<li>同一个功能或业务模块的表使用同一个前缀，例如 <code>user</code>、<code>user_address</code>、<code>user_auth</code></li>
+<li>关键字全部使用大写字母</li>
+<li>表达是否概念的字段，使用 <code>is_xxx</code> 的方式命名，数据类型为 <code>TINYINT(1) UNSIGNED</code>，0 表示否，1 表示是，默认值为 0，例如 <code>is_delete</code>（是否被删除）</li>
+<li>唯一索引使用 <code>uk_xxx</code> 命名，普通索引使用 <code>index_xxx</code> 命名</li>
+</ol>
+<h4 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h4><ol>
+<li>尽量选用更小的数据类型</li>
+<li>时间全部使用 <code>INT(10)</code> 类型存储，某些场景下如果需要存储到毫秒级则使用 <code>INT(13)</code></li>
+<li>尽量避免枚使用举类型，可使用 <code>TINYINT</code> 来代替，好处是好扩展</li>
+<li>为每个非负字段添加 <code>UNSIGNED</code>，节约存储空间</li>
+<li>小数使用 <code>DECIMAL(m,n)</code>，禁止使用 <code>FLOAT</code> 和 <code>DOUBLE</code>，因为后两种类型存在精度损失的问题，对于精度要求很高，或者超出 <code>DECIMAL</code> 范围的场景可以将整数和小数部分使用 <code>INT</code> 分开存储</li>
+<li>如果存储的字符串长度几乎相等，使用 <code>CHAR</code> 定长字符串类型</li>
+<li><code>VARCHAR</code> 是变长字符串，不预先分配存储空间，长度最好不要超过 5000，大于 5000 的字符串，使用 <code>TEXT</code> 存储，独立出来，使用主键关联，避免影响其他字段的索引</li>
+</ol>
+<h4 id="其他规则"><a href="#其他规则" class="headerlink" title="其他规则"></a>其他规则</h4><ol>
+<li>每个表都必须创建一个自增 <code>id</code>，类型为 <code>BIGINT UNSIGNED</code>，并且设置为主键，理论上不参与到业务逻辑代码中</li>
+<li>必须为每个表和字段设置合适的默认值和简单的注释</li>
+<li>如无特殊用途，都使用 <code>InnoDB</code> 存储引擎</li>
+<li>如果要存储表情则使用 <code>utfmb4</code> 字符集，否则都使用 <code>utf-8</code></li>
+</ol>
+<h4 id="索引规则"><a href="#索引规则" class="headerlink" title="索引规则"></a>索引规则</h4><ol>
+<li>具有唯一特性的字段，一定要加唯一索引</li>
+</ol>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="string">`user`</span> (</span><br><span class="line">    <span class="string">`id`</span> <span class="built_in">BIGINT</span>(<span class="number">20</span>) <span class="keyword">UNSIGNED</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> AUTO_INCREMENT,</span><br><span class="line">    <span class="string">`uuid`</span> <span class="built_in">CHAR</span>(<span class="number">32</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'身份标识符'</span>,</span><br><span class="line">    <span class="string">`recommend_uuid`</span> <span class="built_in">CHAR</span>(<span class="number">32</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'推荐人身份标识符'</span>,</span><br><span class="line">    <span class="string">`username`</span> <span class="built_in">VARCHAR</span>(<span class="number">32</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'登陆名'</span>,</span><br><span class="line">    <span class="string">`name`</span> <span class="built_in">VARCHAR</span>(<span class="number">32</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'姓名'</span>,</span><br><span class="line">    <span class="string">`nickname`</span> <span class="built_in">VARCHAR</span>(<span class="number">32</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'昵称'</span>,</span><br><span class="line">    <span class="string">`phone`</span> <span class="built_in">CHAR</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'手机号'</span>,</span><br><span class="line">    <span class="string">`email`</span> <span class="built_in">VARCHAR</span>(<span class="number">255</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'E-mail'</span>,</span><br><span class="line">    <span class="string">`open_id`</span> <span class="built_in">CHAR</span>(<span class="number">32</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'微信的Open ID'</span>,</span><br><span class="line">    <span class="string">`password`</span> <span class="built_in">VARCHAR</span>(<span class="number">255</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'密码密文'</span>,</span><br><span class="line">    <span class="string">`token`</span> <span class="built_in">CHAR</span>(<span class="number">32</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'Token'</span>,</span><br><span class="line">    <span class="string">`token_invalid_time`</span> <span class="built_in">INT</span>(<span class="number">10</span>) <span class="keyword">UNSIGNED</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="number">0</span> <span class="keyword">COMMENT</span> <span class="string">'Token的过期时间'</span>,</span><br><span class="line">    <span class="string">`avatar`</span> <span class="built_in">VARCHAR</span>(<span class="number">255</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'头像的地址'</span>,</span><br><span class="line">    <span class="string">`sign`</span> <span class="built_in">VARCHAR</span>(<span class="number">128</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'签名'</span>,</span><br><span class="line">    <span class="string">`client`</span> TINYINT(<span class="number">2</span>) <span class="keyword">UNSIGNED</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="number">0</span> <span class="keyword">COMMENT</span> <span class="string">'用户来源：0 - 系统创建、1 - PC web、2 - 移动 web、3 - iOS、4 - Android、5 - 微信小程序'</span>,</span><br><span class="line">    <span class="string">`group`</span> TINYINT(<span class="number">1</span>) <span class="keyword">UNSIGNED</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="number">0</span> <span class="keyword">COMMENT</span> <span class="string">'用户组：0 - 普通用户、1 - 管理员、2 - 超级管理员'</span>,</span><br><span class="line">    <span class="string">`last_login`</span> <span class="built_in">INT</span>(<span class="number">10</span>) <span class="keyword">UNSIGNED</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="number">0</span> <span class="keyword">COMMENT</span> <span class="string">'最后登录时间'</span>,</span><br><span class="line">    <span class="string">`gmt_create`</span> <span class="keyword">TIMESTAMP</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="keyword">CURRENT_TIMESTAMP</span> <span class="keyword">COMMENT</span> <span class="string">'记录的创建时间'</span>,</span><br><span class="line">    <span class="string">`gmt_modified`</span> <span class="keyword">TIMESTAMP</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="keyword">CURRENT_TIMESTAMP</span> <span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">CURRENT_TIMESTAMP</span> <span class="keyword">COMMENT</span> <span class="string">'记录的更新时间'</span>,</span><br><span class="line">    PRIMARY <span class="keyword">KEY</span> (<span class="string">`id`</span>),</span><br><span class="line">    <span class="keyword">UNIQUE</span> <span class="keyword">KEY</span> <span class="string">`uk_uuid`</span> (<span class="string">`uuid`</span>),</span><br><span class="line">    <span class="keyword">UNIQUE</span> <span class="keyword">KEY</span> <span class="string">`uk_username`</span> (<span class="string">`username`</span>),</span><br><span class="line">    <span class="keyword">UNIQUE</span> <span class="keyword">KEY</span> <span class="string">`uk_phone`</span> (<span class="string">`phone`</span>)) </span><br><span class="line"><span class="keyword">ENGINE</span> = <span class="keyword">InnoDB</span> </span><br><span class="line"><span class="keyword">DEFAULT</span> <span class="built_in">CHARACTER</span> <span class="keyword">SET</span> = utf8mb4  </span><br><span class="line"><span class="keyword">COMMENT</span> = <span class="string">'用户信息记录表'</span>;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://dolphin836.github.io/2017/06/14/jwt/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="dolphin">
+      <meta itemprop="description" content="个人博客">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="海兵大侠">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/06/14/jwt/" itemprop="url">
+                  JSON Web Tokens 是什么？
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2017-06-14 15:23:00" itemprop="dateCreated datePublished" datetime="2017-06-14T15:23:00+08:00">2017-06-14</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-09-06 10:21:55" itemprop="dateModified" datetime="2018-09-06T10:21:55+08:00">2018-09-06</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/工具与资源/" itemprop="url" rel="index"><span itemprop="name">工具与资源</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>JSON Web Tokens are an open, industry standard <a href="https://tools.ietf.org/html/rfc7519" target="_blank" rel="noopener">RFC 7519</a> method for representing claims securely between two parties.</p>
+<p><a href="https://jwt.io/" target="_blank" rel="noopener">JWT.IO</a> allows you to decode, verify and generate JWT.</p>
+<p><a href="https://jwt.io/introduction/" target="_blank" rel="noopener">官网介绍文章</a></p>
+<p><a href="https://github.com/smilingsun/blog/issues/1" target="_blank" rel="noopener">中文翻译</a></p>
+<p>在前后端分离的应用中，非常适合使用 <code>JWT</code> 来做身份认证。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://dolphin836.github.io/2015/08/20/markdown/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="dolphin">
+      <meta itemprop="description" content="个人博客">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="海兵大侠">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2015/08/20/markdown/" itemprop="url">
+                  markdown 语法备忘录
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2015-08-20 15:23:00" itemprop="dateCreated datePublished" datetime="2015-08-20T15:23:00+08:00">2015-08-20</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-09-06 10:37:13" itemprop="dateModified" datetime="2018-09-06T10:37:13+08:00">2018-09-06</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/工具与资源/" itemprop="url" rel="index"><span itemprop="name">工具与资源</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="https://sspai.com/post/25137" title="认识与入门" target="_blank" rel="noopener">认识与入门</a></p>
+<p>插图全部来自有道云笔记。</p>
+<p>喵了个喵~~</p>
+<p><img src="../images/markdown/01.png" alt="标题"></p>
+<p><img src="../images/markdown/02.png" alt="粗体与斜体"></p>
+<p><img src="../images/markdown/03.png" alt="字体"></p>
+<p><img src="../images/markdown/04.png" alt="待办事项"></p>
+<p><img src="../images/markdown/05.png" alt="分割线"></p>
+<p><img src="../images/markdown/06.png" alt="甘特图"></p>
+<p><img src="../images/markdown/07.png" alt="代码高亮"></p>
+<p><img src="../images/markdown/08.png" alt="链接与图片"></p>
+<p><img src="../images/markdown/09.png" alt="列表"></p>
+<p><img src="../images/markdown/10.png" alt="流程图"></p>
+<p><img src="../images/markdown/11.png" alt="引用"></p>
 
           
         
@@ -643,7 +1715,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -658,7 +1730,15 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -677,7 +1757,45 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">22</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
