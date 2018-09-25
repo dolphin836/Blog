@@ -108,24 +108,25 @@
 
 
 
-  <meta name="description" content="个人博客">
-<meta name="keywords" content="博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="海兵大侠">
-<meta property="og:url" content="https://dolphin836.github.io/tags/Slim-Framework/index.html">
+  <meta name="description" content="Redis 被广泛应用的互联网存储中间件。Redis 超高的性能、完美的文档、简洁易懂的源码以及丰富的客户端库（Java、PHP、Python、Go、Ruby 等）。Redis 也是互联网后端工程师的必备技能之一。Redis 是一个开源的（BSD 协议），基于内存的高性能非关系型（NoSQL）数据库。Redis 常被用作数据库、缓存、消息中间件等。Redis 的特性：  支持数据的持久化 数据类型">
+<meta name="keywords" content="Redis,数据结构,中间件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Redis 基础数据结构及特性">
+<meta property="og:url" content="https://dolphin836.github.io/2017/06/14/redis-base/index.html">
 <meta property="og:site_name" content="海兵大侠">
-<meta property="og:description" content="个人博客">
+<meta property="og:description" content="Redis 被广泛应用的互联网存储中间件。Redis 超高的性能、完美的文档、简洁易懂的源码以及丰富的客户端库（Java、PHP、Python、Go、Ruby 等）。Redis 也是互联网后端工程师的必备技能之一。Redis 是一个开源的（BSD 协议），基于内存的高性能非关系型（NoSQL）数据库。Redis 常被用作数据库、缓存、消息中间件等。Redis 的特性：  支持数据的持久化 数据类型">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-09-25T03:19:56.838Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="海兵大侠">
-<meta name="twitter:description" content="个人博客">
+<meta name="twitter:title" content="Redis 基础数据结构及特性">
+<meta name="twitter:description" content="Redis 被广泛应用的互联网存储中间件。Redis 超高的性能、完美的文档、简洁易懂的源码以及丰富的客户端库（Java、PHP、Python、Go、Ruby 等）。Redis 也是互联网后端工程师的必备技能之一。Redis 是一个开源的（BSD 协议），基于内存的高性能非关系型（NoSQL）数据库。Redis 常被用作数据库、缓存、消息中间件等。Redis 的特性：  支持数据的持久化 数据类型">
 
 
 
 
 
 
-  <link rel="canonical" href="https://dolphin836.github.io/tags/Slim-Framework/"/>
+  <link rel="canonical" href="https://dolphin836.github.io/2017/06/14/redis-base/"/>
 
 
 
@@ -135,7 +136,7 @@
   };
 </script>
 
-  <title>标签: Slim Framework | 海兵大侠</title>
+  <title>Redis 基础数据结构及特性 | 海兵大侠</title>
   
 
 
@@ -182,7 +183,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -239,7 +240,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签<span class="badge">25</span></a>
   </li>
@@ -296,87 +297,261 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Slim Framework<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://dolphin836.github.io/2017/06/14/redis-base/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="dolphin">
+      <meta itemprop="description" content="个人博客">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="海兵大侠">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/08/11/slim-jwt/" itemprop="url">
-              
-                <span itemprop="name">JSON Web Tokens 在 Slim Framework 中的使用</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Redis 基础数据结构及特性
+              
+            
+          </h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-11T09:56:41+08:00"
-              content="2018-08-11" >
-          08-11
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
 
-    </header>
-  </article>
+            
+            
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2017-06-14 15:23:00" itemprop="dateCreated datePublished" datetime="2017-06-14T15:23:00+08:00">2017-06-14</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-09-25 11:19:56" itemprop="dateModified" datetime="2018-09-25T11:19:56+08:00">2018-09-25</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Redis/" itemprop="url" rel="index"><span itemprop="name">Redis</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><code>Redis</code> 被广泛应用的互联网存储中间件。<br><code>Redis</code> 超高的性能、完美的文档、简洁易懂的源码以及丰富的客户端库（<code>Java</code>、<code>PHP</code>、<code>Python</code>、<code>Go</code>、<code>Ruby</code> 等）。<br><code>Redis</code> 也是互联网后端工程师的必备技能之一。<br><code>Redis</code> 是一个开源的（<code>BSD</code> 协议），基于内存的高性能非关系型（<code>NoSQL</code>）数据库。<br><code>Redis</code> 常被用作数据库、缓存、消息中间件等。<br><code>Redis</code> 的特性：</p>
+<ul>
+<li>支持数据的持久化</li>
+<li>数据类型丰富：<code>STRING</code>、<code>HASH</code>、<code>LIST</code>、<code>SET</code>、<code>ZSET</code></li>
+<li>单线程</li>
+<li>原子化操作</li>
+<li>分布式</li>
+</ul>
+<p><code>Redis</code> 所有的数据结构都是以唯一的 <code>KEY</code> 作为名称的，也只能通过 <code>KEY</code> 来获取存储的数据。不同类型的数据结构 <code>VALUE</code> 的结构不一样。</p>
+<table>
+<thead>
+<tr>
+<th>结构类型</th>
+<th style="text-align:left">结构存储的值</th>
+<th style="text-align:left">结构的读写能力</th>
+<th style="text-align:left">特性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>STRING</td>
+<td style="text-align:left">可以是字符串、整数或者浮点数</td>
+<td style="text-align:left">对整个字符串或者字符串的其中一部分执行操作；对整数和浮点数执行自增（increment）或者自减（decrement）操作</td>
+<td style="text-align:left">动态更新，预分配冗余空间</td>
+</tr>
+<tr>
+<td>LIST</td>
+<td style="text-align:left">一个链表，链表上的每个节点都包含了一个字符串</td>
+<td style="text-align:left">从链表的两端推入或者弹出元素；根据偏移量对链表进行修剪（trim）；读取单个或者多个元素；根据值查找或者移除元素</td>
+<td style="text-align:left">有序、重复、自动创建、自动回收</td>
+</tr>
+<tr>
+<td>HASH</td>
+<td style="text-align:left">包含键值对的无序散列表</td>
+<td style="text-align:left">添加、获取、移除单个键值对；获取所有键值对</td>
+<td style="text-align:left">无序、自动创建、自动回收</td>
+</tr>
+<tr>
+<td>SET</td>
+<td style="text-align:left">包含字符串的无序收集器（unordered collection），并且被包含的每个字符串都是独一无二、各不相同的</td>
+<td style="text-align:left">添加、获取、移除单个元素；检查一个元素是否存在于集合中；计算交集、并集、差集；从集合里面随机获取元素</td>
+<td style="text-align:left">无序、唯一、自动创建、自动回收</td>
+</tr>
+<tr>
+<td>ZSET</td>
+<td style="text-align:left">字符串成员（member）和浮点数分值（score）之间的有序映射，元素的排列顺序由分值大小决定</td>
+<td style="text-align:left">添加、获取、移除单个元素；根据分值范围（range）或者成员来获取元素</td>
+<td style="text-align:left">有序、唯一、自动创建、自动回收</td>
+</tr>
+</tbody>
+</table>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Redis/" rel="tag"># Redis</a>
+          
+            <a href="/tags/数据结构/" rel="tag"># 数据结构</a>
+          
+            <a href="/tags/中间件/" rel="tag"># 中间件</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/08/20/markdown/" rel="next" title="markdown 语法备忘录">
+                <i class="fa fa-chevron-left"></i> markdown 语法备忘录
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/06/14/jwt/" rel="prev" title="JSON Web Tokens 是什么？">
+                JSON Web Tokens 是什么？ <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -682,6 +857,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.1"></script>
+
+
 
   
 
