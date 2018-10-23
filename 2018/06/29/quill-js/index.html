@@ -15,10 +15,10 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
 
@@ -32,8 +32,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -56,9 +56,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=6.4.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.4.1" rel="stylesheet" type="text/css">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.1">
@@ -108,19 +108,16 @@
 
 
 
-  <meta name="description" content="官网 Github 主页 Demo 文档 在 Github 上搜索编辑器的时候发现了 Quill.js 这个项目，简单的浏览了它的官网，第一感觉就是文档写的非常好。 立马动手按照文档写了一个简单的 Demo，对于一个编辑器我主要关心以下几点：  UI 颜值既正义 自定义功能 扩展性  我验证了以下几个常见的需求：  个性化工具栏 图片上传 撤销重做  官网文档都详细介绍了这三个需求的实现方式。">
-<meta name="keywords" content="富文本编辑器">
+  <meta name="keywords" content="富文本编辑器">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Quill.js 强大优雅的富文本编辑器介绍">
 <meta property="og:url" content="https://blog.haibing.site/2018/06/29/quill-js/index.html">
 <meta property="og:site_name" content="海兵大侠">
-<meta property="og:description" content="官网 Github 主页 Demo 文档 在 Github 上搜索编辑器的时候发现了 Quill.js 这个项目，简单的浏览了它的官网，第一感觉就是文档写的非常好。 立马动手按照文档写了一个简单的 Demo，对于一个编辑器我主要关心以下几点：  UI 颜值既正义 自定义功能 扩展性  我验证了以下几个常见的需求：  个性化工具栏 图片上传 撤销重做  官网文档都详细介绍了这三个需求的实现方式。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://blog.haibing.site/2018/06/29/images/quill.jpg">
 <meta property="og:updated_time" content="2018-09-06T02:35:15.934Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Quill.js 强大优雅的富文本编辑器介绍">
-<meta name="twitter:description" content="官网 Github 主页 Demo 文档 在 Github 上搜索编辑器的时候发现了 Quill.js 这个项目，简单的浏览了它的官网，第一感觉就是文档写的非常好。 立马动手按照文档写了一个简单的 Demo，对于一个编辑器我主要关心以下几点：  UI 颜值既正义 自定义功能 扩展性  我验证了以下几个常见的需求：  个性化工具栏 图片上传 撤销重做  官网文档都详细介绍了这三个需求的实现方式。">
 <meta name="twitter:image" content="https://blog.haibing.site/2018/06/29/images/quill.jpg">
 
 
@@ -128,7 +125,7 @@
 
 
 
-  <link rel="canonical" href="https://blog.haibing.site/2018/06/29/quill-js/"/>
+  <link rel="canonical" href="https://blog.haibing.site/2018/06/29/quill-js/">
 
 
 
@@ -178,7 +175,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -188,7 +185,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
     
@@ -228,7 +225,7 @@
           
           <li class="menu-item menu-item-home">
     <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
   </li>
         
         
@@ -236,7 +233,7 @@
           
           <li class="menu-item menu-item-about">
     <a href="/about/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
   </li>
         
         
@@ -244,7 +241,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签<span class="badge">26</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">30</span></a>
   </li>
         
         
@@ -252,7 +249,7 @@
           
           <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类<span class="badge">6</span></a>
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">6</span></a>
   </li>
         
         
@@ -260,7 +257,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档<span class="badge">10</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">11</span></a>
   </li>
         
         
@@ -268,7 +265,15 @@
           
           <li class="menu-item menu-item-read">
     <a href="/read/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br />阅读</a>
+      <i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br>阅读</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-photo">
+    <a href="/photo/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-camera"></i> <br>相册</a>
   </li>
 
       
@@ -314,20 +319,20 @@
 
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://blog.haibing.site/2018/06/29/quill-js/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="dolphin">
       <meta itemprop="description" content="个人博客">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="海兵大侠">
     </span>
 
@@ -384,7 +389,7 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -395,7 +400,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/前端/" itemprop="url" rel="index"><span itemprop="name">前端</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/前端/" itemprop="url" rel="index"><span itemprop="name">前端</span></a></span>
 
                 
                 
@@ -429,7 +434,7 @@
       
 
       
-        <p><img src="../images/quill.jpg" alt="Quill.js"></p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <p=""><a href="../images/quill.jpg" title="Quill.js" class="gallery-item"><img src="../images/quill.jpg" alt="Quill.js"></a><p></p>
 <p><a href="https://quilljs.com/" title="官网" target="_blank" rel="noopener">官网</a></p>
 <p><a href="https://github.com/quilljs/quill" title="Github 主页" target="_blank" rel="noopener">Github 主页</a></p>
 <p><a href="https://quilljs.com/playground/" title="Demo" target="_blank" rel="noopener">Demo</a></p>
@@ -457,7 +462,12 @@
 <p>JS</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> toolbarOptions = [</span><br><span class="line">	[&#123; <span class="string">'header'</span>: <span class="number">1</span> &#125;],</span><br><span class="line">	[&#123; <span class="string">'header'</span>: <span class="number">2</span> &#125;],</span><br><span class="line">	[<span class="string">'bold'</span>],</span><br><span class="line">	[<span class="string">'italic'</span>],</span><br><span class="line">	[<span class="string">'underline'</span>],</span><br><span class="line">	[<span class="string">'strike'</span>],</span><br><span class="line">	[<span class="string">'blockquote'</span>],</span><br><span class="line">	[&#123; <span class="string">'list'</span>: <span class="string">'ordered'</span>&#125;],</span><br><span class="line">	[&#123; <span class="string">'list'</span>: <span class="string">'bullet'</span> &#125;],</span><br><span class="line">	[&#123; <span class="string">'indent'</span>: <span class="string">'-1'</span>&#125;],</span><br><span class="line">	[&#123; <span class="string">'indent'</span>: <span class="string">'+1'</span> &#125;],</span><br><span class="line">	[&#123; <span class="string">'color'</span>: [] &#125;],</span><br><span class="line">	[&#123; <span class="string">'align'</span>: [] &#125;],</span><br><span class="line">	[<span class="string">'link'</span>],</span><br><span class="line">	[<span class="string">'image'</span>],</span><br><span class="line">	[<span class="string">'clean'</span>],</span><br><span class="line">	[<span class="string">'undo'</span>],</span><br><span class="line">	[<span class="string">'redo'</span>],</span><br><span class="line">];</span><br><span class="line">		</span><br><span class="line"><span class="keyword">var</span> options = &#123;</span><br><span class="line">	modules: &#123;</span><br><span class="line">		toolbar: toolbarOptions,</span><br><span class="line">		history</span><br><span class="line">	&#125;,</span><br><span class="line">	debug: <span class="string">'error'</span>,</span><br><span class="line">	theme: <span class="string">'snow'</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 初始化编辑器</span></span><br><span class="line"><span class="keyword">var</span> quill = <span class="keyword">new</span> Quill(<span class="string">'#quill'</span>, options);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> toolbar = quill.getModule(<span class="string">'toolbar'</span>);</span><br><span class="line"><span class="comment">// 选择图片</span></span><br><span class="line">toolbar.addHandler(<span class="string">'image'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="built_in">document</span>.getElementById(<span class="string">'file'</span>).click();</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 发布</span></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"release"</span>).onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> content = quill.getContents();</span><br><span class="line">	<span class="built_in">console</span>.log(content);</span><br><span class="line">	<span class="keyword">let</span> html = quill.container.firstChild.innerHTML;</span><br><span class="line">	<span class="built_in">console</span>.log(html);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 撤销</span></span><br><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">".ql-undo"</span>).addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	quill.history.undo();</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 重做</span></span><br><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">".ql-redo"</span>).addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	quill.history.redo();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>另外一点需要注意的就是 <code>Quill</code> 提供的 <code>getContents</code> 方法。它返回的是一个 <code>Delta</code> <code>对象，表示编辑器的内容。Delta</code> 本质上是 <code>JSON</code>，可以非常方便的进行个性化处理。`</p>
-
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>
       
     </div>
 
@@ -550,11 +560,9 @@
 
       <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/images/avatar.gif"
-                alt="dolphin" />
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="dolphin">
             
               <p class="site-author-name" itemprop="name">dolphin</p>
               <p class="site-description motion-element" itemprop="description">个人博客</p>
@@ -567,7 +575,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -657,7 +665,15 @@
                     
                       
                     
-                    <span class="site-state-item-count">26</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">30</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -725,7 +741,7 @@
 
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.8.0</div>
 
 
 
