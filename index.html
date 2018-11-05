@@ -242,7 +242,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">32</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">35</span></a>
   </li>
         
         
@@ -258,7 +258,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">12</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">15</span></a>
   </li>
         
         
@@ -309,6 +309,589 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://blog.haibing.site/2018/11/05/next/share/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="dolphin">
+      <meta itemprop="description" content="个人博客">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="海兵大侠">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/05/next/share/" itemprop="url">
+                  React 同构框架 Next 入门教程三：组件复用
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-05 14:30:00 / 修改时间：15:18:01" itemprop="dateCreated datePublished" datetime="2018-11-05T14:30:00+08:00">2018-11-05</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/前端/" itemprop="url" rel="index"><span itemprop="name">前端</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <ol="">
+<li><a href="/2018/11/05/next/start">React 同构框架 Next 入门教程一：快速开始</a></li>
+<li><a href="/2018/11/05/next/nav">React 同构框架 Next 入门教程二：页面导航</a></li>
+<li><a href="/2018/11/05/next/share">React 同构框架 Next 入门教程三：组件复用</a></li>
+<li><a href="/2018/11/05/next/dynamic">React 同构框架 Next 入门教程四：动态页面</a></li>
+<li><a href="/2018/11/05/next/clean">React 同构框架 Next 入门教程五：美化 URL</a></li>
+<li><a href="/2018/11/05/next/server-clean">React 同构框架 Next 入门教程六：让服务端支持美化后的 URL</a></li>
+<li><a href="/2018/11/05/next/data">React 同构框架 Next 入门教程七：获取数据</a></li>
+<li><a href="/2018/11/05/next/style">React 同构框架 Next 入门教程八：组件样式</a></li>
+<li><a href="/2018/11/05/next/deploy">React 同构框架 Next 入门教程九：部署</a></li>
+
+<h2 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h2><p><a href="https://nextjs.org" target="_blank" rel="noopener">英文官网</a></p>
+<p><a href="https://nextjs.org/docs" target="_blank" rel="noopener">官方文档</a></p>
+<p><a href="https://nextjs.org/learn" target="_blank" rel="noopener">官方教程</a></p>
+<p><a href="https://github.com/zeit/next.js" target="_blank" rel="noopener">Github 主页</a></p>
+<h2 id="组件复用"><a href="#组件复用" class="headerlink" title="组件复用"></a>组件复用</h2><p>在根目录下新增文件夹 <code>components</code> 用于存放公共组件。</p>
+<p>创建 <code>components/Header.js</code> 文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">import Link from &apos;next/link&apos;</span><br><span class="line"></span><br><span class="line">const linkStyle = &#123;</span><br><span class="line">    marginRight: 15</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const Header = () =&gt; (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;Link href=&quot;/&quot;&gt;</span><br><span class="line">            &lt;a style=&#123;linkStyle&#125;&gt;Home&lt;/a&gt;</span><br><span class="line">        &lt;/Link&gt;</span><br><span class="line">        &lt;Link href=&quot;/about&quot;&gt;</span><br><span class="line">            &lt;a style=&#123;linkStyle&#125;&gt;About&lt;/a&gt;</span><br><span class="line">        &lt;/Link&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">export default Header</span><br></pre></td></tr></table></figure>
+<p>然后在页面组件中导入使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import Header from &apos;../components/Header&apos;</span><br><span class="line"></span><br><span class="line">export default () =&gt; (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;Header /&gt;</span><br><span class="line">        &lt;p&gt;Hello Next.js&lt;/p&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>这里的 <code>components</code> 文件夹名字和 <code>pages</code> 不一样，可以自定义，使用的使用按照自定义路径导入就可以了。</p>
+<h2 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h2><p><code>Next</code> 也提供布局功能，当然这很常见。</p>
+<p>创建 <code>components/Layout.js</code> 文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import Header from &apos;./Header&apos;</span><br><span class="line"></span><br><span class="line">const layoutStyle = &#123;</span><br><span class="line">    margin: 20,</span><br><span class="line">    padding: 20,</span><br><span class="line">    border: &apos;1px solid #DDD&apos;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const Layout = (props) =&gt; (</span><br><span class="line">    &lt;div style=&#123;layoutStyle&#125;&gt;</span><br><span class="line">        &lt;Header /&gt;</span><br><span class="line">        &#123;props.children&#125;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">export default Layout</span><br></pre></td></tr></table></figure>
+<p>然后在页面组件中引入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// pages/index.js</span><br><span class="line"></span><br><span class="line">import Layout from &apos;../components/Layout.js&apos;</span><br><span class="line"></span><br><span class="line">export default () =&gt; (</span><br><span class="line">    &lt;Layout&gt;</span><br><span class="line">       &lt;p&gt;Hello Next.js&lt;/p&gt;</span><br><span class="line">    &lt;/Layout&gt;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script src="/lib/lg-thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lg-zoom/lg-zoom.min.js"></script><script src="/lib/lg-autoplay/lg-autoplay.min.js"></script><script src="/lib/lg-fullscreen/lg-fullscreen.min.js"></script><script src="/lib/lg-pager/lg-pager.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://blog.haibing.site/2018/11/05/next/nav/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="dolphin">
+      <meta itemprop="description" content="个人博客">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="海兵大侠">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/05/next/nav/" itemprop="url">
+                  React 同构框架 Next 入门教程二：页面导航
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-05 13:40:00 / 修改时间：14:30:22" itemprop="dateCreated datePublished" datetime="2018-11-05T13:40:00+08:00">2018-11-05</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/前端/" itemprop="url" rel="index"><span itemprop="name">前端</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <ol="">
+<li><a href="/2018/11/05/next/start">React 同构框架 Next 入门教程一：快速开始</a></li>
+<li><a href="/2018/11/05/next/nav">React 同构框架 Next 入门教程二：页面导航</a></li>
+<li><a href="/2018/11/05/next/share">React 同构框架 Next 入门教程三：组件复用</a></li>
+<li><a href="/2018/11/05/next/dynamic">React 同构框架 Next 入门教程四：动态页面</a></li>
+<li><a href="/2018/11/05/next/clean">React 同构框架 Next 入门教程五：美化 URL</a></li>
+<li><a href="/2018/11/05/next/server-clean">React 同构框架 Next 入门教程六：让服务端支持美化后的 URL</a></li>
+<li><a href="/2018/11/05/next/data">React 同构框架 Next 入门教程七：获取数据</a></li>
+<li><a href="/2018/11/05/next/style">React 同构框架 Next 入门教程八：组件样式</a></li>
+<li><a href="/2018/11/05/next/deploy">React 同构框架 Next 入门教程九：部署</a></li>
+
+<h2 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h2><p><a href="https://nextjs.org" target="_blank" rel="noopener">英文官网</a></p>
+<p><a href="https://nextjs.org/docs" target="_blank" rel="noopener">官方文档</a></p>
+<p><a href="https://nextjs.org/learn" target="_blank" rel="noopener">官方教程</a></p>
+<p><a href="https://github.com/zeit/next.js" target="_blank" rel="noopener">Github 主页</a></p>
+<h2 id="页面导航"><a href="#页面导航" class="headerlink" title="页面导航"></a>页面导航</h2><p>添加一个新的页面 <code>/about</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const About = () =&gt; (</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;p&gt;This is About page&lt;/p&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">export default About;</span><br></pre></td></tr></table></figure>
+<p><code>Next</code> 中使用 <code>Link API</code> 进行页面间导航</p>
+<p>修改 <code>Index</code> 组件的内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// This is the Link API</span><br><span class="line">import Link from &apos;next/link&apos;</span><br><span class="line"></span><br><span class="line">const Index = () =&gt; (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;Link href=&quot;/about&quot;&gt;</span><br><span class="line">            &lt;a&gt;About Page&lt;/a&gt;</span><br><span class="line">        &lt;/Link&gt;</span><br><span class="line">        &lt;p&gt;Hello Next.js&lt;/p&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">export default Index</span><br></pre></td></tr></table></figure>
+<p>这里实现的是前端导航，只发生在浏览器，并没有向服务器发起新的请求。</p>
+<p>通过调试工具，我们能发现，当点击 <code>About Page</code> 进入 <code>About</code> 页面时在当前页面动态的插入了 <code>about.js</code> 。</p>
+<p>点击浏览器的 <code>后退</code> 按钮返回主页。</p>
+<p>如果要修改导航的样式，只能在 <code>Link</code> 组件的子元素上添加样式。</p>
+<p><code>Link</code> 其实是 <code>React</code> 中的一个高阶组件。</p>
+<p><code>Link</code> 路由可以使用在任何 <code>React Component</code> 上，例如 <code>Button</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;Link href=&quot;/about&quot;&gt;</span><br><span class="line">    &lt;button&gt;Go to About Page&lt;/button&gt;</span><br><span class="line">&lt;/Link&gt;</span><br></pre></td></tr></table></figure>
+<p>但是前提是这个组件接受 <code>onClick</code> 事件。</p>
+<p><code>Link</code> 组件参数：</p>
+<ul>
+<li>prefetch：预加载（只是 JavaScript 文件）</li>
+<li>replace：</li>
+</ul>
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script src="/lib/lg-thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lg-zoom/lg-zoom.min.js"></script><script src="/lib/lg-autoplay/lg-autoplay.min.js"></script><script src="/lib/lg-fullscreen/lg-fullscreen.min.js"></script><script src="/lib/lg-pager/lg-pager.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://blog.haibing.site/2018/11/05/next/start/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="dolphin">
+      <meta itemprop="description" content="个人博客">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="海兵大侠">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/05/next/start/" itemprop="url">
+                  React 同构框架 Next 入门教程一：快速开始
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-05 11:40:00 / 修改时间：13:54:52" itemprop="dateCreated datePublished" datetime="2018-11-05T11:40:00+08:00">2018-11-05</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/前端/" itemprop="url" rel="index"><span itemprop="name">前端</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <ol="">
+<li><a href="/2018/11/05/next/start">React 同构框架 Next 入门教程一：快速开始</a></li>
+<li><a href="/2018/11/05/next/nav">React 同构框架 Next 入门教程二：页面导航</a></li>
+<li><a href="/2018/11/05/next/share">React 同构框架 Next 入门教程三：组件复用</a></li>
+<li><a href="/2018/11/05/next/dynamic">React 同构框架 Next 入门教程四：动态页面</a></li>
+<li><a href="/2018/11/05/next/clean">React 同构框架 Next 入门教程五：美化 URL</a></li>
+<li><a href="/2018/11/05/next/server-clean">React 同构框架 Next 入门教程六：让服务端支持美化后的 URL</a></li>
+<li><a href="/2018/11/05/next/data">React 同构框架 Next 入门教程七：获取数据</a></li>
+<li><a href="/2018/11/05/next/style">React 同构框架 Next 入门教程八：组件样式</a></li>
+<li><a href="/2018/11/05/next/deploy">React 同构框架 Next 入门教程九：部署</a></li>
+
+<h2 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h2><p><a href="https://nextjs.org" target="_blank" rel="noopener">英文官网</a></p>
+<p><a href="https://nextjs.org/docs" target="_blank" rel="noopener">官方文档</a></p>
+<p><a href="https://nextjs.org/learn" target="_blank" rel="noopener">官方教程</a></p>
+<p><a href="https://github.com/zeit/next.js" target="_blank" rel="noopener">Github 主页</a></p>
+<p>没有找到比较好的中文文档。</p>
+<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul>
+<li>Server-rendered by default（默认服务端渲染）</li>
+<li>Automatic code splitting for faster page loads（代码自动分割）</li>
+<li>Simple client-side routing（前端自动路由）</li>
+<li>Webpack-based dev environment which supports（Webpack 开发环境支持）</li>
+<li>Able to implement with Express or any other Node.js HTTP server（可对接 Express 或其他任何的服务端框架）</li>
+<li>Customizable with your own Babel and Webpack configurations（可自定义 Babel 和 Webpack 设置）</li>
+</ul>
+<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir hello-next</span><br><span class="line">$ cd hello-next</span><br><span class="line">$ npm init -y</span><br><span class="line">$ npm install --save react react-dom next</span><br><span class="line">$ mkdir pages</span><br></pre></td></tr></table></figure>
+<p>在 <code>package.json</code> 中添加命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;scripts&quot;: &#123;</span><br><span class="line">        &quot;dev&quot;: &quot;next&quot;,</span><br><span class="line">        &quot;build&quot;: &quot;next build&quot;,</span><br><span class="line">        &quot;start&quot;: &quot;next start&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>创建第一个页面，在 <code>pages</code> 目录下新增文件 <code>index.js</code> ，内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const Index = () =&gt; (</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;p&gt;Hello Next.js&lt;/p&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">export default Index</span><br></pre></td></tr></table></figure>
+<p>运行命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm run dev</span><br></pre></td></tr></table></figure>
+<p>即可启动本地服务器，默认地址为 <a href="http://localhost:3000" target="_blank" rel="noopener">http://localhost:3000</a></p>
+<p><strong>知识点</strong></p>
+<ul>
+<li><code>pages</code> 目录下的 <code>React Component</code> 自动创建前端路由，不能叫其他名字</li>
+<li>严格区分大小写，如果文件名为 <code>About.js</code> 则对应的路由为 <code>/About</code>，如果访问 <code>/about</code> 会提示 404 错误</li>
+<li>支持多级目录，<code>/account/collection</code> 路由对应的组件为 <code>pages/account/collection.js</code></li>
+</ul>
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script src="/lib/lg-thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lg-zoom/lg-zoom.min.js"></script><script src="/lib/lg-autoplay/lg-autoplay.min.js"></script><script src="/lib/lg-fullscreen/lg-fullscreen.min.js"></script><script src="/lib/lg-pager/lg-pager.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1648,613 +2231,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://blog.haibing.site/2018/06/29/quill-js/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="dolphin">
-      <meta itemprop="description" content="个人博客">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="海兵大侠">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/06/29/quill-js/" itemprop="url">
-                  Quill.js 强大优雅的富文本编辑器介绍
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-06-29 10:04:32" itemprop="dateCreated datePublished" datetime="2018-06-29T10:04:32+08:00">2018-06-29</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-09-06 10:35:15" itemprop="dateModified" datetime="2018-09-06T10:35:15+08:00">2018-09-06</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/前端/" itemprop="url" rel="index"><span itemprop="name">前端</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <p=""><a href="../images/quill.jpg" title="Quill.js" class="gallery-item"><img src="../images/quill.jpg" alt="Quill.js"></a><p></p>
-<p><a href="https://quilljs.com/" title="官网" target="_blank" rel="noopener">官网</a></p>
-<p><a href="https://github.com/quilljs/quill" title="Github 主页" target="_blank" rel="noopener">Github 主页</a></p>
-<p><a href="https://quilljs.com/playground/" title="Demo" target="_blank" rel="noopener">Demo</a></p>
-<p><a href="https://quilljs.com/docs/quickstart/" title="文档" target="_blank" rel="noopener">文档</a></p>
-<p>在 <code>Github</code> 上搜索编辑器的时候发现了 <code>Quill.js</code> 这个项目，简单的浏览了它的官网，第一感觉就是文档写的非常好。</p>
-<p>立马动手按照文档写了一个简单的 <code>Demo</code>，对于一个编辑器我主要关心以下几点：</p>
-<ul>
-<li>UI 颜值既正义</li>
-<li>自定义功能</li>
-<li>扩展性</li>
-</ul>
-<p>我验证了以下几个常见的需求：</p>
-<ul>
-<li>个性化工具栏</li>
-<li>图片上传</li>
-<li>撤销重做</li>
-</ul>
-<p>官网文档都详细介绍了这三个需求的实现方式。</p>
-<p>下面是我的 <code>Demo</code>，需要注意的是 撤销/重做 是通过 <code>history</code> 这个 <code>module</code> 实现的。</p>
-<p>在 <code>toolbarOptions</code> 中添加了 <code>undo</code> 和 <code>redo</code> 选项，然后通过 <code>Quill</code> 提供的 <code>className</code> 设置它们的样式，我直接给它们设置了一个背景图片。</p>
-<p>HTML</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"quill"</span> <span class="attr">class</span>=<span class="string">"quill"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"release"</span>&gt;</span>发布<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">id</span>=<span class="string">"file"</span> <span class="attr">style</span>=<span class="string">"display:none;"</span> <span class="attr">multiple</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>CSS</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.quill</span> &#123;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">375px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ql-toolbar</span> <span class="selector-class">.ql-formats</span> <span class="selector-class">.ql-undo</span> &#123;</span><br><span class="line">	<span class="attribute">background</span>: <span class="built_in">url</span>(./dist/image/undo.svg) no-repeat;</span><br><span class="line">	<span class="attribute">background-size</span>: <span class="number">18px</span> <span class="number">18px</span>;</span><br><span class="line">	<span class="attribute">background-position</span>: <span class="number">3px</span> <span class="number">3px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ql-toolbar</span> <span class="selector-class">.ql-formats</span> <span class="selector-class">.ql-redo</span> &#123;</span><br><span class="line">	<span class="attribute">background</span>: <span class="built_in">url</span>(./dist/image/redo.svg) no-repeat;</span><br><span class="line">	<span class="attribute">background-size</span>: <span class="number">18px</span> <span class="number">18px</span>;</span><br><span class="line">	<span class="attribute">background-position</span>: <span class="number">3px</span> <span class="number">3px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>JS</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> toolbarOptions = [</span><br><span class="line">	[&#123; <span class="string">'header'</span>: <span class="number">1</span> &#125;],</span><br><span class="line">	[&#123; <span class="string">'header'</span>: <span class="number">2</span> &#125;],</span><br><span class="line">	[<span class="string">'bold'</span>],</span><br><span class="line">	[<span class="string">'italic'</span>],</span><br><span class="line">	[<span class="string">'underline'</span>],</span><br><span class="line">	[<span class="string">'strike'</span>],</span><br><span class="line">	[<span class="string">'blockquote'</span>],</span><br><span class="line">	[&#123; <span class="string">'list'</span>: <span class="string">'ordered'</span>&#125;],</span><br><span class="line">	[&#123; <span class="string">'list'</span>: <span class="string">'bullet'</span> &#125;],</span><br><span class="line">	[&#123; <span class="string">'indent'</span>: <span class="string">'-1'</span>&#125;],</span><br><span class="line">	[&#123; <span class="string">'indent'</span>: <span class="string">'+1'</span> &#125;],</span><br><span class="line">	[&#123; <span class="string">'color'</span>: [] &#125;],</span><br><span class="line">	[&#123; <span class="string">'align'</span>: [] &#125;],</span><br><span class="line">	[<span class="string">'link'</span>],</span><br><span class="line">	[<span class="string">'image'</span>],</span><br><span class="line">	[<span class="string">'clean'</span>],</span><br><span class="line">	[<span class="string">'undo'</span>],</span><br><span class="line">	[<span class="string">'redo'</span>],</span><br><span class="line">];</span><br><span class="line">		</span><br><span class="line"><span class="keyword">var</span> options = &#123;</span><br><span class="line">	modules: &#123;</span><br><span class="line">		toolbar: toolbarOptions,</span><br><span class="line">		history</span><br><span class="line">	&#125;,</span><br><span class="line">	debug: <span class="string">'error'</span>,</span><br><span class="line">	theme: <span class="string">'snow'</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 初始化编辑器</span></span><br><span class="line"><span class="keyword">var</span> quill = <span class="keyword">new</span> Quill(<span class="string">'#quill'</span>, options);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> toolbar = quill.getModule(<span class="string">'toolbar'</span>);</span><br><span class="line"><span class="comment">// 选择图片</span></span><br><span class="line">toolbar.addHandler(<span class="string">'image'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="built_in">document</span>.getElementById(<span class="string">'file'</span>).click();</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 发布</span></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"release"</span>).onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> content = quill.getContents();</span><br><span class="line">	<span class="built_in">console</span>.log(content);</span><br><span class="line">	<span class="keyword">let</span> html = quill.container.firstChild.innerHTML;</span><br><span class="line">	<span class="built_in">console</span>.log(html);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 撤销</span></span><br><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">".ql-undo"</span>).addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	quill.history.undo();</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 重做</span></span><br><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">".ql-redo"</span>).addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	quill.history.redo();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>另外一点需要注意的就是 <code>Quill</code> 提供的 <code>getContents</code> 方法。它返回的是一个 <code>Delta</code> <code>对象，表示编辑器的内容。Delta</code> 本质上是 <code>JSON</code>，可以非常方便的进行个性化处理。`</p>
-</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
-        var options = {
-            selector: '.gallery-item'
-        };
-        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
-        }</script>
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://blog.haibing.site/2017/09/12/mysql-select/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="dolphin">
-      <meta itemprop="description" content="个人博客">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="海兵大侠">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/12/mysql-select/" itemprop="url">
-                  MYSQL 查询优化最佳实践
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2017-09-12 12:00:00" itemprop="dateCreated datePublished" datetime="2017-09-12T12:00:00+08:00">2017-09-12</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-09-06 10:24:08" itemprop="dateModified" datetime="2018-09-06T10:24:08+08:00">2018-09-06</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/MYSQL/" itemprop="url" rel="index"><span itemprop="name">MYSQL</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>由于系统的瓶颈大多出现在数据库层面，所以对数据库的操作需要提出一些开发原则，这些开发原则在前期可能会增加工作量，并且对系统性能的提升并不大，反而某些复杂语句可能会影响性能，但是在数据量急剧膨胀后，会带来性能上的极大提升，并且为 <code>SQL</code> 语句的调优，以及系统的拆分打下了良好的基础，开发人员需要严格遵守。</p>
-</blockquote>
-<ul>
-<li><p>应尽量避免在 <code>WHERE</code> 子句中使用 <code>!=</code> 或 <code>&lt;&gt;</code> 操作符，否则引擎将放弃使用索引而进行全表扫描</p>
-</li>
-<li><p>应尽量避免在 <code>WHERE</code> 子句中对字段进行 <code>NULL</code> 值判断，否则引擎将放弃使用索引而进行全表扫描。可以为每个字段都设置默认值，然后使用默认值判断。例如：</p>
-</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="string">`phone`</span> <span class="keyword">FROM</span> <span class="string">`user`</span> <span class="keyword">WHERE</span> <span class="string">`name`</span> <span class="keyword">IS</span> <span class="literal">NULL</span>;</span><br></pre></td></tr></table></figure>
-<p>可改为：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="string">`phone`</span> <span class="keyword">FROM</span> <span class="string">`user`</span> <span class="keyword">WHERE</span> <span class="string">`name`</span> = <span class="string">''</span>;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>应尽量避免在 <code>WHERE</code> 子句中使用 <code>OR</code> 来连接条件，否则引擎将放弃使用索引而进行全表扫描。例如：</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="string">`name`</span> <span class="keyword">FROM</span> <span class="string">`user`</span> <span class="keyword">WHERE</span> <span class="string">`id`</span> = <span class="number">10</span> <span class="keyword">OR</span> <span class="string">`id`</span> = <span class="number">20</span>;</span><br></pre></td></tr></table></figure>
-<p>可改为：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="string">`name`</span> <span class="keyword">FROM</span> <span class="string">`user`</span> <span class="keyword">WHERE</span> <span class="string">`id`</span> = <span class="number">10</span></span><br><span class="line"><span class="keyword">UNION</span> ALL</span><br><span class="line"><span class="keyword">SELECT</span> <span class="string">`name`</span> <span class="keyword">FROM</span> <span class="string">`user`</span> <span class="keyword">WHERE</span> <span class="string">`id`</span> = <span class="number">20</span>;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>检索禁止使用左模糊和全模糊，若要提高效率可以使用全文检索</p>
-</li>
-<li><p><code>IN</code> 和 <code>NOT</code> <code>IN</code> 操作能避免尽量避免，如果必须要用，需要仔细评估 <code>IN</code> 后面的集合元素数量，控制在 1000 以内。对于连续的值推荐使用 <code>BETWEEN</code></p>
-</li>
-<li><p>不要在 <code>WHERE</code> 子句的 <code>=</code> 左边进行函数、算术运算或其他表达式运算，否则引擎将可能无法正确使用索引</p>
-</li>
-<li><p>禁止使用存储过程、函数、触发器、外键约束</p>
-</li>
-<li><p>禁止两张表以上的关联查询。在数据量较大时，连表查询会严重拖慢数据库性能，将大 <code>SQL</code> 拆分成多个子 <code>SQL</code>，在程序中拼接数据</p>
-</li>
-<li><p>禁止使用 * 查询所有字段，只选择需要的字段，例如：</p>
-</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="string">`uuid`</span>, <span class="string">`name`</span>, <span class="string">`phone`</span> <span class="keyword">FROM</span> <span class="string">`user`</span> <span class="keyword">WHERE</span> <span class="string">`create_at`</span> &gt;= <span class="string">'2017-09-30'</span>;</span><br></pre></td></tr></table></figure>
-<p>需要哪些字段必须明确写明</p>
-<ul>
-<li>只查询一条记录的时候带上 <code>LIMIT 1</code>，例如：</li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="string">`id`</span> <span class="keyword">FROM</span> <span class="string">`user`</span> <span class="keyword">WHERE</span> <span class="string">`phone`</span> = <span class="string">'152****0989'</span> <span class="keyword">LIMIT</span> <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://blog.haibing.site/2017/08/04/mysql-table-design/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="dolphin">
-      <meta itemprop="description" content="个人博客">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="海兵大侠">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/04/mysql-table-design/" itemprop="url">
-                  MYSQL 表结构设计最佳实践
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2017-08-04 15:40:00" itemprop="dateCreated datePublished" datetime="2017-08-04T15:40:00+08:00">2017-08-04</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-09-06 10:26:05" itemprop="dateModified" datetime="2018-09-06T10:26:05+08:00">2018-09-06</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/MYSQL/" itemprop="url" rel="index"><span itemprop="name">MYSQL</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="命名规则"><a href="#命名规则" class="headerlink" title="命名规则"></a>命名规则</h4><ol>
-<li>表名、字段名只能使用小写字母、数字、下划线，尽量采用语义明确且合适的单词</li>
-<li>多个单词使用下划线下划线链接，且不超过 3 个，总长度不超过 30 个字符</li>
-<li>禁止使用 <code>SQL</code> 关键字，如 <code>desc</code>，<code>range</code>，<code>match</code> 等</li>
-<li>表名以名词或名词短语单数命名</li>
-<li>同一个功能或业务模块的表使用同一个前缀，例如 <code>user</code>、<code>user_address</code>、<code>user_auth</code></li>
-<li>关键字全部使用大写字母</li>
-<li>表达是否概念的字段，使用 <code>is_xxx</code> 的方式命名，数据类型为 <code>TINYINT(1) UNSIGNED</code>，0 表示否，1 表示是，默认值为 0，例如 <code>is_delete</code>（是否被删除）</li>
-<li>唯一索引使用 <code>uk_xxx</code> 命名，普通索引使用 <code>index_xxx</code> 命名</li>
-</ol>
-<h4 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h4><ol>
-<li>尽量选用更小的数据类型</li>
-<li>时间全部使用 <code>INT(10)</code> 类型存储，某些场景下如果需要存储到毫秒级则使用 <code>INT(13)</code></li>
-<li>尽量避免枚使用举类型，可使用 <code>TINYINT</code> 来代替，好处是好扩展</li>
-<li>为每个非负字段添加 <code>UNSIGNED</code>，节约存储空间</li>
-<li>小数使用 <code>DECIMAL(m,n)</code>，禁止使用 <code>FLOAT</code> 和 <code>DOUBLE</code>，因为后两种类型存在精度损失的问题，对于精度要求很高，或者超出 <code>DECIMAL</code> 范围的场景可以将整数和小数部分使用 <code>INT</code> 分开存储</li>
-<li>如果存储的字符串长度几乎相等，使用 <code>CHAR</code> 定长字符串类型</li>
-<li><code>VARCHAR</code> 是变长字符串，不预先分配存储空间，长度最好不要超过 5000，大于 5000 的字符串，使用 <code>TEXT</code> 存储，独立出来，使用主键关联，避免影响其他字段的索引</li>
-</ol>
-<h4 id="其他规则"><a href="#其他规则" class="headerlink" title="其他规则"></a>其他规则</h4><ol>
-<li>每个表都必须创建一个自增 <code>id</code>，类型为 <code>BIGINT UNSIGNED</code>，并且设置为主键，理论上不参与到业务逻辑代码中</li>
-<li>必须为每个表和字段设置合适的默认值和简单的注释</li>
-<li>如无特殊用途，都使用 <code>InnoDB</code> 存储引擎</li>
-<li>如果要存储表情则使用 <code>utfmb4</code> 字符集，否则都使用 <code>utf-8</code></li>
-</ol>
-<h4 id="索引规则"><a href="#索引规则" class="headerlink" title="索引规则"></a>索引规则</h4><ol>
-<li>具有唯一特性的字段，一定要加唯一索引</li>
-</ol>
-<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="string">`user`</span> (</span><br><span class="line">    <span class="string">`id`</span> <span class="built_in">BIGINT</span>(<span class="number">20</span>) <span class="keyword">UNSIGNED</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> AUTO_INCREMENT,</span><br><span class="line">    <span class="string">`uuid`</span> <span class="built_in">CHAR</span>(<span class="number">32</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'身份标识符'</span>,</span><br><span class="line">    <span class="string">`recommend_uuid`</span> <span class="built_in">CHAR</span>(<span class="number">32</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'推荐人身份标识符'</span>,</span><br><span class="line">    <span class="string">`username`</span> <span class="built_in">VARCHAR</span>(<span class="number">32</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'登陆名'</span>,</span><br><span class="line">    <span class="string">`name`</span> <span class="built_in">VARCHAR</span>(<span class="number">32</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'姓名'</span>,</span><br><span class="line">    <span class="string">`nickname`</span> <span class="built_in">VARCHAR</span>(<span class="number">32</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'昵称'</span>,</span><br><span class="line">    <span class="string">`phone`</span> <span class="built_in">CHAR</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'手机号'</span>,</span><br><span class="line">    <span class="string">`email`</span> <span class="built_in">VARCHAR</span>(<span class="number">255</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'E-mail'</span>,</span><br><span class="line">    <span class="string">`open_id`</span> <span class="built_in">CHAR</span>(<span class="number">32</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'微信的Open ID'</span>,</span><br><span class="line">    <span class="string">`password`</span> <span class="built_in">VARCHAR</span>(<span class="number">255</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'密码密文'</span>,</span><br><span class="line">    <span class="string">`token`</span> <span class="built_in">CHAR</span>(<span class="number">32</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'Token'</span>,</span><br><span class="line">    <span class="string">`token_invalid_time`</span> <span class="built_in">INT</span>(<span class="number">10</span>) <span class="keyword">UNSIGNED</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="number">0</span> <span class="keyword">COMMENT</span> <span class="string">'Token的过期时间'</span>,</span><br><span class="line">    <span class="string">`avatar`</span> <span class="built_in">VARCHAR</span>(<span class="number">255</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'头像的地址'</span>,</span><br><span class="line">    <span class="string">`sign`</span> <span class="built_in">VARCHAR</span>(<span class="number">128</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'签名'</span>,</span><br><span class="line">    <span class="string">`client`</span> TINYINT(<span class="number">2</span>) <span class="keyword">UNSIGNED</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="number">0</span> <span class="keyword">COMMENT</span> <span class="string">'用户来源：0 - 系统创建、1 - PC web、2 - 移动 web、3 - iOS、4 - Android、5 - 微信小程序'</span>,</span><br><span class="line">    <span class="string">`group`</span> TINYINT(<span class="number">1</span>) <span class="keyword">UNSIGNED</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="number">0</span> <span class="keyword">COMMENT</span> <span class="string">'用户组：0 - 普通用户、1 - 管理员、2 - 超级管理员'</span>,</span><br><span class="line">    <span class="string">`last_login`</span> <span class="built_in">INT</span>(<span class="number">10</span>) <span class="keyword">UNSIGNED</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="number">0</span> <span class="keyword">COMMENT</span> <span class="string">'最后登录时间'</span>,</span><br><span class="line">    <span class="string">`gmt_create`</span> <span class="keyword">TIMESTAMP</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="keyword">CURRENT_TIMESTAMP</span> <span class="keyword">COMMENT</span> <span class="string">'记录的创建时间'</span>,</span><br><span class="line">    <span class="string">`gmt_modified`</span> <span class="keyword">TIMESTAMP</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="keyword">CURRENT_TIMESTAMP</span> <span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">CURRENT_TIMESTAMP</span> <span class="keyword">COMMENT</span> <span class="string">'记录的更新时间'</span>,</span><br><span class="line">    PRIMARY <span class="keyword">KEY</span> (<span class="string">`id`</span>),</span><br><span class="line">    <span class="keyword">UNIQUE</span> <span class="keyword">KEY</span> <span class="string">`uk_uuid`</span> (<span class="string">`uuid`</span>),</span><br><span class="line">    <span class="keyword">UNIQUE</span> <span class="keyword">KEY</span> <span class="string">`uk_username`</span> (<span class="string">`username`</span>),</span><br><span class="line">    <span class="keyword">UNIQUE</span> <span class="keyword">KEY</span> <span class="string">`uk_phone`</span> (<span class="string">`phone`</span>)) </span><br><span class="line"><span class="keyword">ENGINE</span> = <span class="keyword">InnoDB</span> </span><br><span class="line"><span class="keyword">DEFAULT</span> <span class="built_in">CHARACTER</span> <span class="keyword">SET</span> = utf8mb4  </span><br><span class="line"><span class="keyword">COMMENT</span> = <span class="string">'用户信息记录表'</span>;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2304,7 +2280,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2406,7 +2382,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">32</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">35</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
