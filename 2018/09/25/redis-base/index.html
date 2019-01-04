@@ -108,18 +108,15 @@
 
 
 
-  <meta name="description" content="Redis 被广泛应用的互联网存储中间件。Redis 超高的性能、完美的文档、简洁易懂的源码以及丰富的客户端库（Java、PHP、Python、Go、Ruby 等）。Redis 互联网后端工程师的必备技能之一。Redis 一个开源的（BSD 协议），基于内存的高性能非关系型（NoSQL）数据库。Redis 常被用作数据库、缓存、消息中间件等。Redis 的特性：  支持数据的持久化 数据类型丰富：">
-<meta name="keywords" content="Redis,数据结构,中间件">
+  <meta name="keywords" content="Redis,数据结构,中间件">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Redis 基础数据结构及特性">
 <meta property="og:url" content="https://blog.haibing.site/2018/09/25/redis-base/index.html">
 <meta property="og:site_name" content="海兵大侠">
-<meta property="og:description" content="Redis 被广泛应用的互联网存储中间件。Redis 超高的性能、完美的文档、简洁易懂的源码以及丰富的客户端库（Java、PHP、Python、Go、Ruby 等）。Redis 互联网后端工程师的必备技能之一。Redis 一个开源的（BSD 协议），基于内存的高性能非关系型（NoSQL）数据库。Redis 常被用作数据库、缓存、消息中间件等。Redis 的特性：  支持数据的持久化 数据类型丰富：">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-09-25T03:26:37.051Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Redis 基础数据结构及特性">
-<meta name="twitter:description" content="Redis 被广泛应用的互联网存储中间件。Redis 超高的性能、完美的文档、简洁易懂的源码以及丰富的客户端库（Java、PHP、Python、Go、Ruby 等）。Redis 互联网后端工程师的必备技能之一。Redis 一个开源的（BSD 协议），基于内存的高性能非关系型（NoSQL）数据库。Redis 常被用作数据库、缓存、消息中间件等。Redis 的特性：  支持数据的持久化 数据类型丰富：">
 
 
 
@@ -242,7 +239,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">35</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">37</span></a>
   </li>
         
         
@@ -250,7 +247,7 @@
           
           <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">6</span></a>
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">7</span></a>
   </li>
         
         
@@ -258,7 +255,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">15</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">16</span></a>
   </li>
         
         
@@ -423,7 +420,7 @@
       
 
       
-        <p><code>Redis</code> 被广泛应用的互联网存储中间件。<br><code>Redis</code> 超高的性能、完美的文档、简洁易懂的源码以及丰富的客户端库（<code>Java</code>、<code>PHP</code>、<code>Python</code>、<code>Go</code>、<code>Ruby</code> 等）。<br><code>Redis</code> 互联网后端工程师的必备技能之一。<br><code>Redis</code> 一个开源的（<code>BSD</code> 协议），基于内存的高性能非关系型（<code>NoSQL</code>）数据库。<br><code>Redis</code> 常被用作数据库、缓存、消息中间件等。<br><code>Redis</code> 的特性：</p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <p=""><code>Redis</code> 被广泛应用的互联网存储中间件。<br><code>Redis</code> 超高的性能、完美的文档、简洁易懂的源码以及丰富的客户端库（<code>Java</code>、<code>PHP</code>、<code>Python</code>、<code>Go</code>、<code>Ruby</code> 等）。<br><code>Redis</code> 互联网后端工程师的必备技能之一。<br><code>Redis</code> 一个开源的（<code>BSD</code> 协议），基于内存的高性能非关系型（<code>NoSQL</code>）数据库。<br><code>Redis</code> 常被用作数据库、缓存、消息中间件等。<br><code>Redis</code> 的特性：<p></p>
 <ul>
 <li>支持数据的持久化</li>
 <li>数据类型丰富：<code>STRING</code>、<code>HASH</code>、<code>LIST</code>、<code>SET</code>、<code>ZSET</code></li>
@@ -474,7 +471,12 @@
 </tr>
 </tbody>
 </table>
-
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script src="/lib/lg-thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lg-zoom/lg-zoom.min.js"></script><script src="/lib/lg-autoplay/lg-autoplay.min.js"></script><script src="/lib/lg-fullscreen/lg-fullscreen.min.js"></script><script src="/lib/lg-pager/lg-pager.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>
       
     </div>
 
@@ -586,7 +588,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -611,7 +613,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -694,7 +698,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">35</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">37</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -748,7 +756,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>

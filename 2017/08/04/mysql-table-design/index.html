@@ -108,18 +108,15 @@
 
 
 
-  <meta name="description" content="命名规则 表名、字段名只能使用小写字母、数字、下划线，尽量采用语义明确且合适的单词 多个单词使用下划线下划线链接，且不超过 3 个，总长度不超过 30 个字符 禁止使用 SQL 关键字，如 desc，range，match 等 表名以名词或名词短语单数命名 同一个功能或业务模块的表使用同一个前缀，例如 user、user_address、user_auth 关键字全部使用大写字母 表达是否概念的字">
-<meta name="keywords" content="最佳实践,数据库,SQL,设计">
+  <meta name="keywords" content="最佳实践,数据库,SQL,设计">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MYSQL 表结构设计最佳实践">
 <meta property="og:url" content="https://blog.haibing.site/2017/08/04/mysql-table-design/index.html">
 <meta property="og:site_name" content="海兵大侠">
-<meta property="og:description" content="命名规则 表名、字段名只能使用小写字母、数字、下划线，尽量采用语义明确且合适的单词 多个单词使用下划线下划线链接，且不超过 3 个，总长度不超过 30 个字符 禁止使用 SQL 关键字，如 desc，range，match 等 表名以名词或名词短语单数命名 同一个功能或业务模块的表使用同一个前缀，例如 user、user_address、user_auth 关键字全部使用大写字母 表达是否概念的字">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-09-06T02:26:05.703Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MYSQL 表结构设计最佳实践">
-<meta name="twitter:description" content="命名规则 表名、字段名只能使用小写字母、数字、下划线，尽量采用语义明确且合适的单词 多个单词使用下划线下划线链接，且不超过 3 个，总长度不超过 30 个字符 禁止使用 SQL 关键字，如 desc，range，match 等 表名以名词或名词短语单数命名 同一个功能或业务模块的表使用同一个前缀，例如 user、user_address、user_auth 关键字全部使用大写字母 表达是否概念的字">
 
 
 
@@ -242,7 +239,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">35</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">37</span></a>
   </li>
         
         
@@ -250,7 +247,7 @@
           
           <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">6</span></a>
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">7</span></a>
   </li>
         
         
@@ -258,7 +255,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">15</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">16</span></a>
   </li>
         
         
@@ -435,7 +432,7 @@
       
 
       
-        <h4 id="命名规则"><a href="#命名规则" class="headerlink" title="命名规则"></a>命名规则</h4><ol>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <h4="" id="命名规则"><a href="#命名规则" class="headerlink" title="命名规则"></a>命名规则<ol>
 <li>表名、字段名只能使用小写字母、数字、下划线，尽量采用语义明确且合适的单词</li>
 <li>多个单词使用下划线下划线链接，且不超过 3 个，总长度不超过 30 个字符</li>
 <li>禁止使用 <code>SQL</code> 关键字，如 <code>desc</code>，<code>range</code>，<code>match</code> 等</li>
@@ -464,7 +461,12 @@
 <li>具有唯一特性的字段，一定要加唯一索引</li>
 </ol>
 <h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="string">`user`</span> (</span><br><span class="line">    <span class="string">`id`</span> <span class="built_in">BIGINT</span>(<span class="number">20</span>) <span class="keyword">UNSIGNED</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> AUTO_INCREMENT,</span><br><span class="line">    <span class="string">`uuid`</span> <span class="built_in">CHAR</span>(<span class="number">32</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'身份标识符'</span>,</span><br><span class="line">    <span class="string">`recommend_uuid`</span> <span class="built_in">CHAR</span>(<span class="number">32</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'推荐人身份标识符'</span>,</span><br><span class="line">    <span class="string">`username`</span> <span class="built_in">VARCHAR</span>(<span class="number">32</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'登陆名'</span>,</span><br><span class="line">    <span class="string">`name`</span> <span class="built_in">VARCHAR</span>(<span class="number">32</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'姓名'</span>,</span><br><span class="line">    <span class="string">`nickname`</span> <span class="built_in">VARCHAR</span>(<span class="number">32</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'昵称'</span>,</span><br><span class="line">    <span class="string">`phone`</span> <span class="built_in">CHAR</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'手机号'</span>,</span><br><span class="line">    <span class="string">`email`</span> <span class="built_in">VARCHAR</span>(<span class="number">255</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'E-mail'</span>,</span><br><span class="line">    <span class="string">`open_id`</span> <span class="built_in">CHAR</span>(<span class="number">32</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'微信的Open ID'</span>,</span><br><span class="line">    <span class="string">`password`</span> <span class="built_in">VARCHAR</span>(<span class="number">255</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'密码密文'</span>,</span><br><span class="line">    <span class="string">`token`</span> <span class="built_in">CHAR</span>(<span class="number">32</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'Token'</span>,</span><br><span class="line">    <span class="string">`token_invalid_time`</span> <span class="built_in">INT</span>(<span class="number">10</span>) <span class="keyword">UNSIGNED</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="number">0</span> <span class="keyword">COMMENT</span> <span class="string">'Token的过期时间'</span>,</span><br><span class="line">    <span class="string">`avatar`</span> <span class="built_in">VARCHAR</span>(<span class="number">255</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'头像的地址'</span>,</span><br><span class="line">    <span class="string">`sign`</span> <span class="built_in">VARCHAR</span>(<span class="number">128</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">''</span> <span class="keyword">COMMENT</span> <span class="string">'签名'</span>,</span><br><span class="line">    <span class="string">`client`</span> TINYINT(<span class="number">2</span>) <span class="keyword">UNSIGNED</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="number">0</span> <span class="keyword">COMMENT</span> <span class="string">'用户来源：0 - 系统创建、1 - PC web、2 - 移动 web、3 - iOS、4 - Android、5 - 微信小程序'</span>,</span><br><span class="line">    <span class="string">`group`</span> TINYINT(<span class="number">1</span>) <span class="keyword">UNSIGNED</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="number">0</span> <span class="keyword">COMMENT</span> <span class="string">'用户组：0 - 普通用户、1 - 管理员、2 - 超级管理员'</span>,</span><br><span class="line">    <span class="string">`last_login`</span> <span class="built_in">INT</span>(<span class="number">10</span>) <span class="keyword">UNSIGNED</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="number">0</span> <span class="keyword">COMMENT</span> <span class="string">'最后登录时间'</span>,</span><br><span class="line">    <span class="string">`gmt_create`</span> <span class="keyword">TIMESTAMP</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="keyword">CURRENT_TIMESTAMP</span> <span class="keyword">COMMENT</span> <span class="string">'记录的创建时间'</span>,</span><br><span class="line">    <span class="string">`gmt_modified`</span> <span class="keyword">TIMESTAMP</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="keyword">CURRENT_TIMESTAMP</span> <span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">CURRENT_TIMESTAMP</span> <span class="keyword">COMMENT</span> <span class="string">'记录的更新时间'</span>,</span><br><span class="line">    PRIMARY <span class="keyword">KEY</span> (<span class="string">`id`</span>),</span><br><span class="line">    <span class="keyword">UNIQUE</span> <span class="keyword">KEY</span> <span class="string">`uk_uuid`</span> (<span class="string">`uuid`</span>),</span><br><span class="line">    <span class="keyword">UNIQUE</span> <span class="keyword">KEY</span> <span class="string">`uk_username`</span> (<span class="string">`username`</span>),</span><br><span class="line">    <span class="keyword">UNIQUE</span> <span class="keyword">KEY</span> <span class="string">`uk_phone`</span> (<span class="string">`phone`</span>)) </span><br><span class="line"><span class="keyword">ENGINE</span> = <span class="keyword">InnoDB</span> </span><br><span class="line"><span class="keyword">DEFAULT</span> <span class="built_in">CHARACTER</span> <span class="keyword">SET</span> = utf8mb4  </span><br><span class="line"><span class="keyword">COMMENT</span> = <span class="string">'用户信息记录表'</span>;</span><br></pre></td></tr></table></figure>
-
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script src="/lib/lg-thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lg-zoom/lg-zoom.min.js"></script><script src="/lib/lg-autoplay/lg-autoplay.min.js"></script><script src="/lib/lg-fullscreen/lg-fullscreen.min.js"></script><script src="/lib/lg-pager/lg-pager.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>
       
     </div>
 
@@ -587,7 +589,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -612,7 +614,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -695,7 +699,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">35</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">37</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -745,7 +753,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#命名规则"><span class="nav-number">1.</span> <span class="nav-text">命名规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据类型"><span class="nav-number">2.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他规则"><span class="nav-number">3.</span> <span class="nav-text">其他规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#索引规则"><span class="nav-number">4.</span> <span class="nav-text">索引规则</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#实例"><span class="nav-number"></span> <span class="nav-text">实例</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据类型"><span class="nav-number">1.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他规则"><span class="nav-number">2.</span> <span class="nav-text">其他规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#索引规则"><span class="nav-number">3.</span> <span class="nav-text">索引规则</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#实例"><span class="nav-number"></span> <span class="nav-text">实例</span></a></li></div>
             
 
           </div>
@@ -765,7 +773,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>

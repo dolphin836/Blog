@@ -108,18 +108,15 @@
 
 
 
-  <meta name="description" content="由于系统的瓶颈大多出现在数据库层面，所以对数据库的操作需要提出一些开发原则，这些开发原则在前期可能会增加工作量，并且对系统性能的提升并不大，反而某些复杂语句可能会影响性能，但是在数据量急剧膨胀后，会带来性能上的极大提升，并且为 SQL 语句的调优，以及系统的拆分打下了良好的基础，开发人员需要严格遵守。   应尽量避免在 WHERE 子句中使用 != 或 &amp;lt;&amp;gt; 操作符，否则引擎将放弃使">
-<meta name="keywords" content="最佳实践,数据库,SQL,优化">
+  <meta name="keywords" content="最佳实践,数据库,SQL,优化">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MYSQL 查询优化最佳实践">
 <meta property="og:url" content="https://blog.haibing.site/2017/09/12/mysql-select/index.html">
 <meta property="og:site_name" content="海兵大侠">
-<meta property="og:description" content="由于系统的瓶颈大多出现在数据库层面，所以对数据库的操作需要提出一些开发原则，这些开发原则在前期可能会增加工作量，并且对系统性能的提升并不大，反而某些复杂语句可能会影响性能，但是在数据量急剧膨胀后，会带来性能上的极大提升，并且为 SQL 语句的调优，以及系统的拆分打下了良好的基础，开发人员需要严格遵守。   应尽量避免在 WHERE 子句中使用 != 或 &amp;lt;&amp;gt; 操作符，否则引擎将放弃使">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-09-06T02:24:08.661Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MYSQL 查询优化最佳实践">
-<meta name="twitter:description" content="由于系统的瓶颈大多出现在数据库层面，所以对数据库的操作需要提出一些开发原则，这些开发原则在前期可能会增加工作量，并且对系统性能的提升并不大，反而某些复杂语句可能会影响性能，但是在数据量急剧膨胀后，会带来性能上的极大提升，并且为 SQL 语句的调优，以及系统的拆分打下了良好的基础，开发人员需要严格遵守。   应尽量避免在 WHERE 子句中使用 != 或 &amp;lt;&amp;gt; 操作符，否则引擎将放弃使">
 
 
 
@@ -242,7 +239,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">35</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">37</span></a>
   </li>
         
         
@@ -250,7 +247,7 @@
           
           <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">6</span></a>
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">7</span></a>
   </li>
         
         
@@ -258,7 +255,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">15</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">16</span></a>
   </li>
         
         
@@ -435,9 +432,9 @@
       
 
       
-        <blockquote>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <blockquote="">
 <p>由于系统的瓶颈大多出现在数据库层面，所以对数据库的操作需要提出一些开发原则，这些开发原则在前期可能会增加工作量，并且对系统性能的提升并不大，反而某些复杂语句可能会影响性能，但是在数据量急剧膨胀后，会带来性能上的极大提升，并且为 <code>SQL</code> 语句的调优，以及系统的拆分打下了良好的基础，开发人员需要严格遵守。</p>
-</blockquote>
+
 <ul>
 <li><p>应尽量避免在 <code>WHERE</code> 子句中使用 <code>!=</code> 或 <code>&lt;&gt;</code> 操作符，否则引擎将放弃使用索引而进行全表扫描</p>
 </li>
@@ -473,7 +470,12 @@
 <li>只查询一条记录的时候带上 <code>LIMIT 1</code>，例如：</li>
 </ul>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="string">`id`</span> <span class="keyword">FROM</span> <span class="string">`user`</span> <span class="keyword">WHERE</span> <span class="string">`phone`</span> = <span class="string">'152****0989'</span> <span class="keyword">LIMIT</span> <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
-
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script src="/lib/lg-thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lg-zoom/lg-zoom.min.js"></script><script src="/lib/lg-autoplay/lg-autoplay.min.js"></script><script src="/lib/lg-fullscreen/lg-fullscreen.min.js"></script><script src="/lib/lg-pager/lg-pager.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>
       
     </div>
 
@@ -587,7 +589,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -612,7 +614,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -695,7 +699,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">35</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">37</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -749,7 +757,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>

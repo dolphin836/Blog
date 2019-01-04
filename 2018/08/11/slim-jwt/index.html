@@ -108,18 +108,15 @@
 
 
 
-  <meta name="description" content="如果你还不了解 JSON Web Token（简称 JWT）是什么，有什么用途，常见的应用场景是什么，基本原理是什么，请先阅读 JSON Web Tokens 是什么？ 学习相关知识。 在 Slim Framework 中，使用中间件引入 JWT 机制是最合适的。我们这里使用的是 Slim-jwt-auth 项目，这个项目的基础是 php-jwt 项目，使用前请阅读这两个项目的相关文档。 配置中间">
-<meta name="keywords" content="Json,Token,Web,JWT,安全,身份认证,权限,Slim Framework">
+  <meta name="keywords" content="Json,Token,Web,JWT,安全,身份认证,权限,Slim Framework">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JSON Web Tokens 在 Slim Framework 中的使用">
 <meta property="og:url" content="https://blog.haibing.site/2018/08/11/slim-jwt/index.html">
 <meta property="og:site_name" content="海兵大侠">
-<meta property="og:description" content="如果你还不了解 JSON Web Token（简称 JWT）是什么，有什么用途，常见的应用场景是什么，基本原理是什么，请先阅读 JSON Web Tokens 是什么？ 学习相关知识。 在 Slim Framework 中，使用中间件引入 JWT 机制是最合适的。我们这里使用的是 Slim-jwt-auth 项目，这个项目的基础是 php-jwt 项目，使用前请阅读这两个项目的相关文档。 配置中间">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-09-06T02:33:23.861Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JSON Web Tokens 在 Slim Framework 中的使用">
-<meta name="twitter:description" content="如果你还不了解 JSON Web Token（简称 JWT）是什么，有什么用途，常见的应用场景是什么，基本原理是什么，请先阅读 JSON Web Tokens 是什么？ 学习相关知识。 在 Slim Framework 中，使用中间件引入 JWT 机制是最合适的。我们这里使用的是 Slim-jwt-auth 项目，这个项目的基础是 php-jwt 项目，使用前请阅读这两个项目的相关文档。 配置中间">
 
 
 
@@ -242,7 +239,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">35</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">37</span></a>
   </li>
         
         
@@ -250,7 +247,7 @@
           
           <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">6</span></a>
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">7</span></a>
   </li>
         
         
@@ -258,7 +255,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">15</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">16</span></a>
   </li>
         
         
@@ -435,7 +432,7 @@
       
 
       
-        <p>如果你还不了解 <code>JSON Web Token</code>（简称 JWT）是什么，有什么用途，常见的应用场景是什么，基本原理是什么，请先阅读 <a href="/article/2017/06/14/152300.html">JSON Web Tokens 是什么？</a> 学习相关知识。</p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <p="">如果你还不了解 <code>JSON Web Token</code>（简称 JWT）是什么，有什么用途，常见的应用场景是什么，基本原理是什么，请先阅读 <a href="/article/2017/06/14/152300.html">JSON Web Tokens 是什么？</a> 学习相关知识。<p></p>
 <p>在 <code>Slim Framework</code> 中，使用中间件引入 <code>JWT</code> 机制是最合适的。我们这里使用的是 <a href="https://github.com/tuupola/slim-jwt-auth" target="_blank" rel="noopener">Slim-jwt-auth</a> 项目，这个项目的基础是 <a href="https://github.com/firebase/php-jwt" target="_blank" rel="noopener">php-jwt</a> 项目，使用前请阅读这两个项目的相关文档。</p>
 <h3 id="配置中间件"><a href="#配置中间件" class="headerlink" title="配置中间件"></a>配置中间件</h3><p>安装 Slim-jwt-auth 后在 <code>Slim</code> 中按如下方式引入</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * Slim JWT 身份验证中间件</span></span><br><span class="line"><span class="comment"> * https://github.com/tuupola/slim-jwt-auth</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 参数说明</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * cookie      ：使用 cookie 存储 Token，此参数设置 cookie 的名称</span></span><br><span class="line"><span class="comment"> * secure      ：是否使用 HTTPS 验证</span></span><br><span class="line"><span class="comment"> * relaxed     ：不进行 HTTPS 验证的域名</span></span><br><span class="line"><span class="comment"> * secret      ：密钥</span></span><br><span class="line"><span class="comment"> * path        : 需要进行身份验证的路径，设置为 '/' 表示验证全部的路径</span></span><br><span class="line"><span class="comment"> * passthrough ：不需要进行身份验证的路径</span></span><br><span class="line"><span class="comment"> * attribute   ：在 Request 中的标志，可通过 $request-&gt;getAttribute('') 读取</span></span><br><span class="line"><span class="comment"> * environment ：</span></span><br><span class="line"><span class="comment"> * header      ：在 header 中的标志，默认是 Authorization，配合 environment 设置一起使用</span></span><br><span class="line"><span class="comment"> * error       : 未能通过验证时的回调函数</span></span><br><span class="line"><span class="comment"> * callback    : 通过身份验证时的回调函数</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">$app-&gt;add(</span><br><span class="line">    <span class="keyword">new</span> \Slim\Middleware\JwtAuthentication(</span><br><span class="line">        [</span><br><span class="line">          <span class="string">"attribute"</span> =&gt; <span class="string">"JWT_Auth"</span>,</span><br><span class="line">               <span class="string">"path"</span> =&gt; <span class="string">"/v1/user"</span>,</span><br><span class="line">        <span class="string">"passthrough"</span> =&gt; <span class="string">"/token"</span>,</span><br><span class="line">        <span class="string">"environment"</span> =&gt; [<span class="string">"HTTP_JWT_AUTH"</span>, <span class="string">"REDIRECT_HTTP_JWT_AUTH"</span>],</span><br><span class="line">             <span class="string">"header"</span> =&gt; <span class="string">"JWT_Auth"</span>,</span><br><span class="line">             <span class="string">"secret"</span> =&gt; getenv(<span class="string">"JWT_SECRET"</span>),</span><br><span class="line">             <span class="string">"secure"</span> =&gt; <span class="keyword">false</span>,</span><br><span class="line">              <span class="string">"error"</span> =&gt; <span class="function"><span class="keyword">function</span> <span class="params">($request, $response, $args)</span> <span class="title">use</span> <span class="params">($container)</span> </span>&#123;</span><br><span class="line">                    $json[<span class="string">'code'</span>] = <span class="number">-1</span>;</span><br><span class="line">                    $json[<span class="string">'note'</span>] = $args[<span class="string">'message'</span>];</span><br><span class="line">                    $json[<span class="string">'help'</span>] = <span class="string">'http://api.app.com'</span>;</span><br><span class="line">                    </span><br><span class="line">                    $container-&gt;log-&gt;write($args[<span class="string">'message'</span>]);</span><br><span class="line">                    </span><br><span class="line">                    <span class="keyword">return</span> $response-&gt;withStatus(<span class="number">401</span>)</span><br><span class="line">                                    -&gt;withHeader(<span class="string">"Content-Type"</span>, <span class="string">"application/json"</span>)</span><br><span class="line">                                    -&gt;write(json_encode($json, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT));</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="string">"callback"</span> =&gt; <span class="function"><span class="keyword">function</span> <span class="params">($request, $response, $args)</span> <span class="title">use</span> <span class="params">($container)</span> </span>&#123;</span><br><span class="line">                    $container-&gt;log-&gt;write($args);</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    )</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
@@ -456,7 +453,12 @@
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$auth = $request-&gt;getAttribute(<span class="string">"JWT_Auth"</span>);</span><br></pre></td></tr></table></figure>
 <p>来获取 <code>Payload</code> 信息，也就是在生成 <code>JSON Web Token</code> 时设置的内容。<code>JWT_Auth</code> 是在中间件中设置的 <code>attribute</code> 属性，从中取出用户标识，取出用户数据，返回给客户端。</p>
 <p>结束。</p>
-
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script src="/lib/lg-thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lg-zoom/lg-zoom.min.js"></script><script src="/lib/lg-autoplay/lg-autoplay.min.js"></script><script src="/lib/lg-fullscreen/lg-fullscreen.min.js"></script><script src="/lib/lg-pager/lg-pager.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>
       
     </div>
 
@@ -587,7 +589,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -612,7 +614,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -695,7 +699,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">35</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">37</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -765,7 +773,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>

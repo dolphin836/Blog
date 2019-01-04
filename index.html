@@ -242,7 +242,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">35</span></a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">37</span></a>
   </li>
         
         
@@ -250,7 +250,7 @@
           
           <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">6</span></a>
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">7</span></a>
   </li>
         
         
@@ -258,7 +258,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">15</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">16</span></a>
   </li>
         
         
@@ -309,6 +309,203 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://blog.haibing.site/2019/01/03/manjaro/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="dolphin">
+      <meta itemprop="description" content="个人博客">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="海兵大侠">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/01/03/manjaro/" itemprop="url">
+                  Manjaro Linux 之旅
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-01-03 11:30:00" itemprop="dateCreated datePublished" datetime="2019-01-03T11:30:00+08:00">2019-01-03</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-01-04 15:56:55" itemprop="dateModified" datetime="2019-01-04T15:56:55+08:00">2019-01-04</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <h2="" id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言<blockquote>
+<p>接触 Linux 系统始于 2011 年到 2013 年间使用 Fedora 6 开发 QT 应用程序和 C 语言程序，后来写 PHP ，经常捣鼓服务器，又接触了 CentOS。一直想使用 Linux 系统做日常开发工作，先后试过 Fedora、Ubuntu、CentOS、Linux Mint，都不尽满意。直到最近接触 Manjaro，通过近一个月的试用，基本满足了我日常开发的需求。</p>
+</blockquote>
+<h2 id="特色"><a href="#特色" class="headerlink" title="特色"></a>特色</h2><ul>
+<li>硬件支持完善</li>
+<li>自带内核管理工具</li>
+<li>丰富的软件源，包括很多常用的国产软件</li>
+<li>丰富的桌面环境，包括 XFCE、KDE、GNOME 等，覆盖需求面广</li>
+</ul>
+<h2 id="包管理器"><a href="#包管理器" class="headerlink" title="包管理器"></a>包管理器</h2><p><a href="https://wiki.archlinux.org/index.php/Pacman_(简体中文" target="_blank" rel="noopener">Pacman 介绍</a>) “[Pacman 介绍”)</p>
+<h2 id="添加软件源"><a href="#添加软件源" class="headerlink" title="添加软件源"></a>添加软件源</h2><p>只有添加了国内的软件源才能通过 Pacman 安装很多国内的软件，建议最开始就做。</p>
+<p><a href="https://wiki.archlinux.org/index.php/Mirrors_(简体中文" target="_blank" rel="noopener">Mirrors 介绍</a>) “[Mirrors 介绍”)</p>
+<h2 id="常用软件"><a href="#常用软件" class="headerlink" title="常用软件"></a>常用软件</h2><p><a href="https://www.archlinux.org/packages/" target="_blank" rel="noopener">Arch Linux 软件包搜索</a> “[Arch Linux 软件包搜索”)</p>
+<p><a href="https://aur.archlinux.org/packages" target="_blank" rel="noopener">AUR 软件包搜索</a> “[AUR 软件包搜索”)</p>
+<h4 id="常用软件-1"><a href="#常用软件-1" class="headerlink" title="常用软件"></a>常用软件</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ pacman -S git                      <span class="comment"># Git</span></span><br><span class="line">$ pacman -S vim                      <span class="comment"># Vim</span></span><br><span class="line">$ pacman -S google-chrome            <span class="comment"># Chrome 浏览器</span></span><br><span class="line">$ pacman -S nodejs                   <span class="comment"># Node.js</span></span><br><span class="line">$ pacman -S npm                      <span class="comment"># Npm</span></span><br><span class="line">$ pacman -S phpstorm                 <span class="comment"># PhpStorm PHP IDE</span></span><br><span class="line">$ pacman -S phpstorm-jre</span><br><span class="line">$ pacman -S dbeaver                  <span class="comment"># DBeaver 数据库管理</span></span><br><span class="line">$ pacman -S mysql-workbench          <span class="comment"># Mysql Workbench 数据库管理</span></span><br><span class="line">$ pacman -S visual-studio-code-bin   <span class="comment"># VS Code 文本编辑器</span></span><br><span class="line">$ pacman -S postman-bin              <span class="comment"># PostMan</span></span><br></pre></td></tr></table></figure>
+<h4 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h4><h5 id="安装服务"><a href="#安装服务" class="headerlink" title="安装服务"></a>安装服务</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ pacman -S redis          <span class="comment"># Redis</span></span><br><span class="line">$ pacman -S mariadb        <span class="comment"># Mysql</span></span><br><span class="line">$ pacman -S rabbitmq       <span class="comment"># Rabbit MQ</span></span><br><span class="line">$ pacman -S rabbitmqadmin  <span class="comment"># Rabbit MQ 管理面板</span></span><br><span class="line">$ pacman -S nginx-mainline <span class="comment"># Nginx</span></span><br><span class="line">$ pacman -S php            <span class="comment"># PHP</span></span><br><span class="line">$ pacman -S composer       <span class="comment"># Composer</span></span><br><span class="line">$ pacman -S php-gd php-imap php-intl php-snmp php-xsl libiconv <span class="comment"># PHP 扩展库</span></span><br></pre></td></tr></table></figure>
+<h5 id="管理服务"><a href="#管理服务" class="headerlink" title="管理服务"></a>管理服务</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ systemctl start|restart|status|stop|<span class="built_in">enable</span>|<span class="built_in">disable</span> redis</span><br><span class="line">$ systemctl start|restart|status|stop|<span class="built_in">enable</span>|<span class="built_in">disable</span> mysqld</span><br><span class="line">$ systemctl start|restart|status|stop|<span class="built_in">enable</span>|<span class="built_in">disable</span> nginx</span><br><span class="line">$ systemctl start|restart|status|stop|<span class="built_in">enable</span>|<span class="built_in">disable</span> php-fpm</span><br></pre></td></tr></table></figure>
+<h5 id="配置虚拟主机"><a href="#配置虚拟主机" class="headerlink" title="配置虚拟主机"></a>配置虚拟主机</h5><ol>
+<li>将 php-fpm.conf 中的用户设置为当前登录用户</li>
+<li>将 nginx.conf 中的 user 设置为当前登录用户</li>
+<li>在 nginx.conf 中新增虚拟主机配置项</li>
+</ol>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script src="/lib/lg-thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lg-zoom/lg-zoom.min.js"></script><script src="/lib/lg-autoplay/lg-autoplay.min.js"></script><script src="/lib/lg-fullscreen/lg-fullscreen.min.js"></script><script src="/lib/lg-pager/lg-pager.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1222,7 +1419,7 @@
       
         
           
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <h2="" id="RabbitMQ-简介"><a href="#RabbitMQ-简介" class="headerlink" title="RabbitMQ 简介"></a>RabbitMQ 简介</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <h2="" id="RabbitMQ-简介"><a href="#RabbitMQ-简介" class="headerlink" title="RabbitMQ 简介"></a>RabbitMQ 简介</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script src="/lib/lg-thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lg-zoom/lg-zoom.min.js"></script><script src="/lib/lg-autoplay/lg-autoplay.min.js"></script><script src="/lib/lg-fullscreen/lg-fullscreen.min.js"></script><script src="/lib/lg-pager/lg-pager.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
         var options = {
             selector: '.gallery-item'
         };
@@ -1384,7 +1581,7 @@
       
         
           
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git tag</span><br><span class="line">$ git tag -l &apos;v1.0.*&apos;</span><br></pre></td></tr></table></figure>
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <figure=""><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git tag</span><br><span class="line">$ git tag -l &apos;v1.0.*&apos;</span><br></pre></td></tr></table>
 <blockquote>
 <p>列出现有标签，可使用 -l 参数进行检索</p>
 </blockquote>
@@ -1408,7 +1605,12 @@
 <blockquote>
 <p>一次推送所有的本地标签</p>
 </blockquote>
-
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script src="/lib/lg-thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lg-zoom/lg-zoom.min.js"></script><script src="/lib/lg-autoplay/lg-autoplay.min.js"></script><script src="/lib/lg-fullscreen/lg-fullscreen.min.js"></script><script src="/lib/lg-pager/lg-pager.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>
           
         
       
@@ -1565,11 +1767,16 @@
       
         
           
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git rm -r --cached file</span><br></pre></td></tr></table></figure>
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <figure=""><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git rm -r --cached file</span><br></pre></td></tr></table>
 <blockquote>
 <p>如果将某文件加入 .gitignore 却没有从 Git 中移除，这时间需要先将已经纳入 Git 版本管理的文件移除</p>
 </blockquote>
-
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script src="/lib/lg-thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lg-zoom/lg-zoom.min.js"></script><script src="/lib/lg-autoplay/lg-autoplay.min.js"></script><script src="/lib/lg-fullscreen/lg-fullscreen.min.js"></script><script src="/lib/lg-pager/lg-pager.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>
           
         
       
@@ -1726,7 +1933,7 @@
       
         
           
-            <p><code>Redis</code> 被广泛应用的互联网存储中间件。<br><code>Redis</code> 超高的性能、完美的文档、简洁易懂的源码以及丰富的客户端库（<code>Java</code>、<code>PHP</code>、<code>Python</code>、<code>Go</code>、<code>Ruby</code> 等）。<br><code>Redis</code> 互联网后端工程师的必备技能之一。<br><code>Redis</code> 一个开源的（<code>BSD</code> 协议），基于内存的高性能非关系型（<code>NoSQL</code>）数据库。<br><code>Redis</code> 常被用作数据库、缓存、消息中间件等。<br><code>Redis</code> 的特性：</p>
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <p=""><code>Redis</code> 被广泛应用的互联网存储中间件。<br><code>Redis</code> 超高的性能、完美的文档、简洁易懂的源码以及丰富的客户端库（<code>Java</code>、<code>PHP</code>、<code>Python</code>、<code>Go</code>、<code>Ruby</code> 等）。<br><code>Redis</code> 互联网后端工程师的必备技能之一。<br><code>Redis</code> 一个开源的（<code>BSD</code> 协议），基于内存的高性能非关系型（<code>NoSQL</code>）数据库。<br><code>Redis</code> 常被用作数据库、缓存、消息中间件等。<br><code>Redis</code> 的特性：<p></p>
 <ul>
 <li>支持数据的持久化</li>
 <li>数据类型丰富：<code>STRING</code>、<code>HASH</code>、<code>LIST</code>、<code>SET</code>、<code>ZSET</code></li>
@@ -1777,7 +1984,12 @@
 </tr>
 </tbody>
 </table>
-
+</div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script src="/lib/lg-thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lg-zoom/lg-zoom.min.js"></script><script src="/lib/lg-autoplay/lg-autoplay.min.js"></script><script src="/lib/lg-fullscreen/lg-fullscreen.min.js"></script><script src="/lib/lg-pager/lg-pager.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+        }</script>
           
         
       
@@ -2041,196 +2253,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://blog.haibing.site/2018/08/11/slim-jwt/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="dolphin">
-      <meta itemprop="description" content="个人博客">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="海兵大侠">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/11/slim-jwt/" itemprop="url">
-                  JSON Web Tokens 在 Slim Framework 中的使用
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-08-11 09:56:41" itemprop="dateCreated datePublished" datetime="2018-08-11T09:56:41+08:00">2018-08-11</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-09-06 10:33:23" itemprop="dateModified" datetime="2018-09-06T10:33:23+08:00">2018-09-06</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/PHP/" itemprop="url" rel="index"><span itemprop="name">PHP</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>如果你还不了解 <code>JSON Web Token</code>（简称 JWT）是什么，有什么用途，常见的应用场景是什么，基本原理是什么，请先阅读 <a href="/article/2017/06/14/152300.html">JSON Web Tokens 是什么？</a> 学习相关知识。</p>
-<p>在 <code>Slim Framework</code> 中，使用中间件引入 <code>JWT</code> 机制是最合适的。我们这里使用的是 <a href="https://github.com/tuupola/slim-jwt-auth" target="_blank" rel="noopener">Slim-jwt-auth</a> 项目，这个项目的基础是 <a href="https://github.com/firebase/php-jwt" target="_blank" rel="noopener">php-jwt</a> 项目，使用前请阅读这两个项目的相关文档。</p>
-<h3 id="配置中间件"><a href="#配置中间件" class="headerlink" title="配置中间件"></a>配置中间件</h3><p>安装 Slim-jwt-auth 后在 <code>Slim</code> 中按如下方式引入</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * Slim JWT 身份验证中间件</span></span><br><span class="line"><span class="comment"> * https://github.com/tuupola/slim-jwt-auth</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 参数说明</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * cookie      ：使用 cookie 存储 Token，此参数设置 cookie 的名称</span></span><br><span class="line"><span class="comment"> * secure      ：是否使用 HTTPS 验证</span></span><br><span class="line"><span class="comment"> * relaxed     ：不进行 HTTPS 验证的域名</span></span><br><span class="line"><span class="comment"> * secret      ：密钥</span></span><br><span class="line"><span class="comment"> * path        : 需要进行身份验证的路径，设置为 '/' 表示验证全部的路径</span></span><br><span class="line"><span class="comment"> * passthrough ：不需要进行身份验证的路径</span></span><br><span class="line"><span class="comment"> * attribute   ：在 Request 中的标志，可通过 $request-&gt;getAttribute('') 读取</span></span><br><span class="line"><span class="comment"> * environment ：</span></span><br><span class="line"><span class="comment"> * header      ：在 header 中的标志，默认是 Authorization，配合 environment 设置一起使用</span></span><br><span class="line"><span class="comment"> * error       : 未能通过验证时的回调函数</span></span><br><span class="line"><span class="comment"> * callback    : 通过身份验证时的回调函数</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">$app-&gt;add(</span><br><span class="line">    <span class="keyword">new</span> \Slim\Middleware\JwtAuthentication(</span><br><span class="line">        [</span><br><span class="line">          <span class="string">"attribute"</span> =&gt; <span class="string">"JWT_Auth"</span>,</span><br><span class="line">               <span class="string">"path"</span> =&gt; <span class="string">"/v1/user"</span>,</span><br><span class="line">        <span class="string">"passthrough"</span> =&gt; <span class="string">"/token"</span>,</span><br><span class="line">        <span class="string">"environment"</span> =&gt; [<span class="string">"HTTP_JWT_AUTH"</span>, <span class="string">"REDIRECT_HTTP_JWT_AUTH"</span>],</span><br><span class="line">             <span class="string">"header"</span> =&gt; <span class="string">"JWT_Auth"</span>,</span><br><span class="line">             <span class="string">"secret"</span> =&gt; getenv(<span class="string">"JWT_SECRET"</span>),</span><br><span class="line">             <span class="string">"secure"</span> =&gt; <span class="keyword">false</span>,</span><br><span class="line">              <span class="string">"error"</span> =&gt; <span class="function"><span class="keyword">function</span> <span class="params">($request, $response, $args)</span> <span class="title">use</span> <span class="params">($container)</span> </span>&#123;</span><br><span class="line">                    $json[<span class="string">'code'</span>] = <span class="number">-1</span>;</span><br><span class="line">                    $json[<span class="string">'note'</span>] = $args[<span class="string">'message'</span>];</span><br><span class="line">                    $json[<span class="string">'help'</span>] = <span class="string">'http://api.app.com'</span>;</span><br><span class="line">                    </span><br><span class="line">                    $container-&gt;log-&gt;write($args[<span class="string">'message'</span>]);</span><br><span class="line">                    </span><br><span class="line">                    <span class="keyword">return</span> $response-&gt;withStatus(<span class="number">401</span>)</span><br><span class="line">                                    -&gt;withHeader(<span class="string">"Content-Type"</span>, <span class="string">"application/json"</span>)</span><br><span class="line">                                    -&gt;write(json_encode($json, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT));</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="string">"callback"</span> =&gt; <span class="function"><span class="keyword">function</span> <span class="params">($request, $response, $args)</span> <span class="title">use</span> <span class="params">($container)</span> </span>&#123;</span><br><span class="line">                    $container-&gt;log-&gt;write($args);</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    )</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-<p>主要就是要理解这里面的各种设置项，可仔细阅读 <code>Slim-jwt-auth</code> 的说明文档。我这里使用的自己写的日志类库来记录日志，也可以参考官方的做法，使用<code>Monolog\Logger</code> 来实现。</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> <span class="title">Monolog</span>\<span class="title">Logger</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">Monolog</span>\<span class="title">Handler</span>\<span class="title">RotatingFileHandler</span>;</span><br><span class="line"></span><br><span class="line">$logger   = <span class="keyword">new</span> Logger(<span class="string">"slim"</span>);</span><br><span class="line">$rotating = <span class="keyword">new</span> RotatingFileHandler(<span class="keyword">__DIR__</span> . <span class="string">"/logs/slim.log"</span>, <span class="number">0</span>, Logger::DEBUG);</span><br><span class="line">$logger-&gt;pushHandler($rotating);</span><br><span class="line"></span><br><span class="line">$app-&gt;add(</span><br><span class="line">    <span class="keyword">new</span> \Slim\Middleware\JwtAuthentication(</span><br><span class="line">        [</span><br><span class="line">          <span class="string">"attribute"</span> =&gt; <span class="string">"JWT_Auth"</span>,</span><br><span class="line">               <span class="string">"path"</span> =&gt; <span class="string">"/v1/user"</span>,</span><br><span class="line">        <span class="string">"passthrough"</span> =&gt; <span class="string">"/token"</span>,</span><br><span class="line">             <span class="string">"logger"</span> =&gt; $logger</span><br><span class="line">        ]</span><br><span class="line">    )</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-<p>当身份验证未通过时会自动将错误信息写入日志文件，也就是错误回调中参数中的 <code>message</code> 中的内容。</p>
-<h3 id="生成-Token"><a href="#生成-Token" class="headerlink" title="生成 Token"></a>生成 Token</h3><p>当用户提供 <code>username</code> 和 <code>password</code> 并通过验证后，服务器端需要为其生成一个 <code>JSON Web Token</code>，并返回给客户端，客户端将其存在本地。</p>
-<p>无论何时想要访问一个受保护的路由或资源，客户端应该随请求一起发送　<code>JSON Web Token</code>。<code>JSON Web Token</code> 通常在 <code>Authentication HTTP</code> 头部中，使用 <code>Bearer</code> 格式（<code>schema</code>）存放，<code>HTTP</code> 头部的内容通常是这样的格式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Authorization: Bearer &lt;token&gt;</span><br></pre></td></tr></table></figure>
-<p>下面是在 <code>Slim</code> 中生成 <code>JSON Web Token</code> 的例子：</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">index</span><span class="params">($request, $response, $args)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    $data = <span class="keyword">array</span>(</span><br><span class="line">        <span class="string">"iss"</span> =&gt; <span class="string">"https://auth.medlande.com/v1"</span>, <span class="comment">//签发者</span></span><br><span class="line">        <span class="string">"sub"</span> =&gt; <span class="string">"Auth"</span>,       <span class="comment">// 主题</span></span><br><span class="line">        <span class="string">"aud"</span> =&gt; <span class="string">'1'</span>,          <span class="comment">// 受众</span></span><br><span class="line">        <span class="string">"iat"</span> =&gt; time(),       <span class="comment">// 签发时间</span></span><br><span class="line">        <span class="string">"nbf"</span> =&gt; time(),       <span class="comment">// 启用时间</span></span><br><span class="line">        <span class="string">"exp"</span> =&gt; time() + <span class="number">3600</span> <span class="comment">// 过期时间</span></span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    $token = JWT::encode($data, getenv(<span class="string">"JWT_SECRET"</span>));</span><br><span class="line"></span><br><span class="line">    $json[<span class="string">'code'</span>] = <span class="number">0</span>;</span><br><span class="line">    $json[<span class="string">'note'</span>] = <span class="string">'Success.'</span>;</span><br><span class="line">    $json[<span class="string">'data'</span>] = <span class="keyword">array</span>(<span class="string">'token'</span> =&gt; $token);</span><br><span class="line">    $json[<span class="string">'help'</span>] = <span class="string">'http://api.hbdx.com'</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// setcookie("JWT_Auth", $token, time() + 7200);</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 前台得到 Token 后，可以写入 cookie，或者 HTTP HEADER，配合 middleware 的设置来做</span></span><br><span class="line">    <span class="keyword">return</span> $response-&gt;withStatus(<span class="number">200</span>)</span><br><span class="line">        -&gt;withHeader(<span class="string">"Content-Type"</span>, <span class="string">"application/json"</span>)</span><br><span class="line">        -&gt;write(json_encode($json, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>　　输出的结果为：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    code: 0,</span><br><span class="line">    note: "Success.",</span><br><span class="line">    data: &#123;</span><br><span class="line">        token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXV0aC5tZWRsYW5kZS5jb21cL3YxIiwic3ViIjoiQXV0aCIsImF1ZCI6IjEiLCJpYXQiOjE1MDI0MzY5ODAsIm5iZiI6MTUwMjQzNjk4MCwiZXhwIjoxNTAyNDQwNTgwfQ.FboOTNextlqK3-7LHyje6-QmlkqhjA-EYnSj-wsE4EM"</span><br><span class="line">    &#125;,</span><br><span class="line">    help: "http://api.hbdx.com"</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="客户端请求"><a href="#客户端请求" class="headerlink" title="客户端请求"></a>客户端请求</h3><p>我这里使用 <code>PHP</code> 来做模拟请求，使用的是 <code>Guzzle Http</code> 请求库，代码如下：</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">$server = <span class="string">'http://api.hbdx.cc/v1'</span>;</span><br><span class="line"></span><br><span class="line">$client = <span class="keyword">new</span> \GuzzleHttp\Client();</span><br><span class="line">$res    = $client-&gt;request(<span class="string">'GET'</span>, $server . <span class="string">'/token'</span>);</span><br><span class="line">$json   = $res-&gt;getBody();</span><br><span class="line">$data   = json_decode($json);</span><br><span class="line">$token  = $data-&gt;data-&gt;token;</span><br><span class="line"></span><br><span class="line"><span class="comment">// var_dump($token);</span></span><br><span class="line"></span><br><span class="line">$res    = $client-&gt;request(<span class="string">'GET'</span>, $server . <span class="string">'/user/1'</span>, [</span><br><span class="line">    <span class="string">'headers'</span> =&gt; [</span><br><span class="line">        <span class="string">'JWT_Auth'</span> =&gt; <span class="string">'Bearer '</span> . $token</span><br><span class="line">    ]</span><br><span class="line">]);</span><br><span class="line"></span><br><span class="line">$json   = $res-&gt;getBody();</span><br><span class="line"></span><br><span class="line"><span class="keyword">echo</span> $json;</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">首先，我们通过 `token` 接口向服务器端请求了一个 `JSON Web Token`，在实际应用中就是登录接口。`user` 接口是一个受保护资源，需要身份验证，我们在 `HTTP Header` 中按照 `JSON Web Token` 要求的格式添加 `Token`。注意，这里使用的是 `JWT_Auth` 字段，这是因为我们在中间件的配置中进行了设置：</span><br><span class="line"></span><br><span class="line">```php</span><br><span class="line"><span class="string">"environment"</span> =&gt; [<span class="string">"HTTP_JWT_AUTH"</span>, <span class="string">"REDIRECT_HTTP_JWT_AUTH"</span>],</span><br><span class="line">     <span class="string">"header"</span> =&gt; <span class="string">"JWT_Auth"</span></span><br></pre></td></tr></table></figure>
-<p>默认使用 <code>Authorization</code> 就可以了。</p>
-<h3 id="解析-Payload"><a href="#解析-Payload" class="headerlink" title="解析 Payload"></a>解析 Payload</h3><p>请求通过 <code>JSON Web Token</code> 验证后，在 <code>Slim</code> 中我们可以通过</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$auth = $request-&gt;getAttribute(<span class="string">"JWT_Auth"</span>);</span><br></pre></td></tr></table></figure>
-<p>来获取 <code>Payload</code> 信息，也就是在生成 <code>JSON Web Token</code> 时设置的内容。<code>JWT_Auth</code> 是在中间件中设置的 <code>attribute</code> 属性，从中取出用户标识，取出用户数据，返回给客户端。</p>
-<p>结束。</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2280,7 +2302,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2305,7 +2327,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -2388,7 +2412,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">35</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">37</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -2442,7 +2470,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
