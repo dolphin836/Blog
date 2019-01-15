@@ -108,22 +108,22 @@
 
 
 
-  <meta name="keywords" content="React,教程,同构">
+  <meta name="keywords" content="自动化,Github,Git,Node,Shell">
 <meta property="og:type" content="article">
-<meta property="og:title" content="React 同构框架 Next 入门教程二：页面导航">
-<meta property="og:url" content="https://blog.haibing.site/2018/11/05/next/nav/index.html">
+<meta property="og:title" content="通过 GITHUB WEBHOOKS 实现自动部署">
+<meta property="og:url" content="https://blog.haibing.site/2019/01/15/deploy/index.html">
 <meta property="og:site_name" content="海兵大侠">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-05T06:30:22.536Z">
+<meta property="og:updated_time" content="2019-01-15T03:30:56.684Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="React 同构框架 Next 入门教程二：页面导航">
+<meta name="twitter:title" content="通过 GITHUB WEBHOOKS 实现自动部署">
 
 
 
 
 
 
-  <link rel="canonical" href="https://blog.haibing.site/2018/11/05/next/nav/">
+  <link rel="canonical" href="https://blog.haibing.site/2019/01/15/deploy/">
 
 
 
@@ -133,7 +133,7 @@
   };
 </script>
 
-  <title>React 同构框架 Next 入门教程二：页面导航 | 海兵大侠</title>
+  <title>通过 GITHUB WEBHOOKS 实现自动部署 | 海兵大侠</title>
   
 
 
@@ -322,7 +322,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://blog.haibing.site/2018/11/05/next/nav/">
+    <link itemprop="mainEntityOfPage" href="https://blog.haibing.site/2019/01/15/deploy/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="dolphin">
@@ -339,7 +339,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">React 同构框架 Next 入门教程二：页面导航
+          <h1 class="post-title" itemprop="name headline">通过 GITHUB WEBHOOKS 实现自动部署
               
             
           </h1>
@@ -364,7 +364,7 @@
                 
               
 
-              <time title="创建时间：2018-11-05 13:40:00 / 修改时间：14:30:22" itemprop="dateCreated datePublished" datetime="2018-11-05T13:40:00+08:00">2018-11-05</time>
+              <time title="创建时间：2019-01-15 11:00:00 / 修改时间：11:30:56" itemprop="dateCreated datePublished" datetime="2019-01-15T11:00:00+08:00">2019-01-15</time>
             
 
             
@@ -386,7 +386,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/前端/" itemprop="url" rel="index"><span itemprop="name">前端</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/工具与资源/" itemprop="url" rel="index"><span itemprop="name">工具与资源</span></a></span>
 
                 
                 
@@ -420,39 +420,37 @@
       
 
       
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <ol="">
-<li><a href="/2018/11/05/next/start">React 同构框架 Next 入门教程一：快速开始</a></li>
-<li><a href="/2018/11/05/next/nav">React 同构框架 Next 入门教程二：页面导航</a></li>
-<li><a href="/2018/11/05/next/share">React 同构框架 Next 入门教程三：组件复用</a></li>
-<li><a href="/2018/11/05/next/dynamic">React 同构框架 Next 入门教程四：动态页面</a></li>
-<li><a href="/2018/11/05/next/clean">React 同构框架 Next 入门教程五：美化 URL</a></li>
-<li><a href="/2018/11/05/next/server-clean">React 同构框架 Next 入门教程六：让服务端支持美化后的 URL</a></li>
-<li><a href="/2018/11/05/next/data">React 同构框架 Next 入门教程七：获取数据</a></li>
-<li><a href="/2018/11/05/next/style">React 同构框架 Next 入门教程八：组件样式</a></li>
-<li><a href="/2018/11/05/next/deploy">React 同构框架 Next 入门教程九：部署</a></li>
-
-<h2 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h2><p><a href="https://nextjs.org" target="_blank" rel="noopener">英文官网</a></p>
-<p><a href="https://nextjs.org/docs" target="_blank" rel="noopener">官方文档</a></p>
-<p><a href="https://nextjs.org/learn" target="_blank" rel="noopener">官方教程</a></p>
-<p><a href="https://github.com/zeit/next.js" target="_blank" rel="noopener">Github 主页</a></p>
-<h2 id="页面导航"><a href="#页面导航" class="headerlink" title="页面导航"></a>页面导航</h2><p>添加一个新的页面 <code>/about</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const About = () =&gt; (</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;p&gt;This is About page&lt;/p&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">export default About;</span><br></pre></td></tr></table></figure>
-<p><code>Next</code> 中使用 <code>Link API</code> 进行页面间导航</p>
-<p>修改 <code>Index</code> 组件的内容</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// This is the Link API</span><br><span class="line">import Link from &apos;next/link&apos;</span><br><span class="line"></span><br><span class="line">const Index = () =&gt; (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;Link href=&quot;/about&quot;&gt;</span><br><span class="line">            &lt;a&gt;About Page&lt;/a&gt;</span><br><span class="line">        &lt;/Link&gt;</span><br><span class="line">        &lt;p&gt;Hello Next.js&lt;/p&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">export default Index</span><br></pre></td></tr></table></figure>
-<p>这里实现的是前端导航，只发生在浏览器，并没有向服务器发起新的请求。</p>
-<p>通过调试工具，我们能发现，当点击 <code>About Page</code> 进入 <code>About</code> 页面时在当前页面动态的插入了 <code>about.js</code> 。</p>
-<p>点击浏览器的 <code>后退</code> 按钮返回主页。</p>
-<p>如果要修改导航的样式，只能在 <code>Link</code> 组件的子元素上添加样式。</p>
-<p><code>Link</code> 其实是 <code>React</code> 中的一个高阶组件。</p>
-<p><code>Link</code> 路由可以使用在任何 <code>React Component</code> 上，例如 <code>Button</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;Link href=&quot;/about&quot;&gt;</span><br><span class="line">    &lt;button&gt;Go to About Page&lt;/button&gt;</span><br><span class="line">&lt;/Link&gt;</span><br></pre></td></tr></table></figure>
-<p>但是前提是这个组件接受 <code>onClick</code> 事件。</p>
-<p><code>Link</code> 组件参数：</p>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css"><div class=".article-gallery" <h2="" id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言<blockquote>
+<p>WEBHOOKS 其实就是当发生特定的事件时通知特定的服务。GITHUB WEBHOOKS 的特定事件指的是 GIT 事件，例如 PUSH。特定的服务指的就是用户自己配置的 POST 请求。</p>
+</blockquote>
+<p>所以，要通过 GITHUB WEBHOOKS 来实现代码的自动部署，首先需要提供一个对外的 POST 接口，然后通过这个接口执行代码部署命令。</p>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><ol>
+<li>通过 <code>SHELL</code> 命令实现代码的部署</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git pull <span class="comment"># 拉取代码</span></span><br></pre></td></tr></table></figure>
+<p>保存为 <code>deploy.sh</code>，存储在项目代码所在目录。</p>
+<ol start="2">
+<li><p><code>POST</code> 接口</p>
+<p> 这里使用 <code>Node</code> 实现。先安装 <code>github-webhook-handler</code> 组件，然后在项目代码所在目录创建 <code>server.js</code> 文件：</p>
+</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>)</span><br><span class="line"><span class="keyword">var</span> createHandler = <span class="built_in">require</span>(<span class="string">'github-webhook-handler'</span>)</span><br><span class="line"><span class="keyword">var</span> handler = createHandler(&#123;</span><br><span class="line">    path: <span class="string">'/deploy'</span>, <span class="comment">// 访问路径</span></span><br><span class="line">    secret: <span class="string">'***************'</span> <span class="comment">// 密钥，在 GITHUB WEBHOOKS 配置中需要</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">runCommond</span>(<span class="params">cmd, args, callback</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> spawn = <span class="built_in">require</span>(<span class="string">'child_process'</span>).spawn;</span><br><span class="line">    <span class="keyword">var</span> child = spawn(cmd, args);</span><br><span class="line">    <span class="keyword">var</span> resp  = <span class="string">""</span>;</span><br><span class="line"></span><br><span class="line">    child.stdout.on(<span class="string">'data'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">buffer</span>) </span>&#123;</span><br><span class="line">        resp += buffer.toString();</span><br><span class="line">    &#125;);</span><br><span class="line">    child.stdout.on(<span class="string">'end'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        callback(resp)</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http.createServer(<span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">    handler(req, res, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span><br><span class="line">        res.statusCode = <span class="number">404</span></span><br><span class="line">        res.end(<span class="string">'404 ERROR.'</span>)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;).listen(<span class="number">7676</span>)</span><br><span class="line"></span><br><span class="line">handler.on(<span class="string">'error'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.error(<span class="string">'Error:'</span>, err.message)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">handler.on(<span class="string">'push'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'Received a push event for %s to %s'</span>,</span><br><span class="line">        event.payload.repository.name,</span><br><span class="line">        event.payload.ref);</span><br><span class="line">        </span><br><span class="line">    runCommond(<span class="string">'sh'</span>, [<span class="string">'./deploy.sh'</span>], <span class="function"><span class="keyword">function</span> (<span class="params">text</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(text)</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>通过命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ node server.js</span><br></pre></td></tr></table></figure>
+<p>开启服务后，我们在就通过 <code>7676</code> 端口的 <code>deploy</code> 路径执行 <code>SHELL</code> 脚本了。如果服务器本身已经启用 <code>HTTP</code> 服务了，可以通过代理跳转下，以 <code>Nginx</code> 为例：</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">location</span> /deploy &#123;</span><br><span class="line">    <span class="attribute">proxy_pass</span> http://127.0.0.1:7676;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>假如我们的 WEB 服务地址是：<code>https://app.io</code>，那么现在就可以通过 <code>https://app.io/deploy</code> 访问到 <code>server.js</code> 服务了。</p>
+<ol start="3">
+<li><p>配置 GITHUB WEBHOOKS</p>
 <ul>
-<li>prefetch：预加载（只是 JavaScript 文件）</li>
-<li>replace：</li>
+<li><code>Payload URL</code> 设置为 <code>https://app.io/deploy</code>；</li>
+<li><code>Content type</code> 选择 <code>application/json</code>；</li>
+<li><code>Secret</code> 设置为 <code>server.js</code> 文件中的 <code>secret</code>；</li>
 </ul>
+</li>
+<li><p>完成。</p>
+</li>
+</ol>
 </div><script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script><script src="/lib/lg-thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lg-zoom/lg-zoom.min.js"></script><script src="/lib/lg-autoplay/lg-autoplay.min.js"></script><script src="/lib/lg-fullscreen/lg-fullscreen.min.js"></script><script src="/lib/lg-pager/lg-pager.min.js"></script><script>if (typeof lightGallery !== 'undefined') {
         var options = {
             selector: '.gallery-item'
@@ -478,11 +476,15 @@
       
         <div class="post-tags">
           
-            <a href="/tags/React/" rel="tag"># React</a>
+            <a href="/tags/自动化/" rel="tag"># 自动化</a>
           
-            <a href="/tags/教程/" rel="tag"># 教程</a>
+            <a href="/tags/Github/" rel="tag"># Github</a>
           
-            <a href="/tags/同构/" rel="tag"># 同构</a>
+            <a href="/tags/Git/" rel="tag"># Git</a>
+          
+            <a href="/tags/Node/" rel="tag"># Node</a>
+          
+            <a href="/tags/Shell/" rel="tag"># Shell</a>
           
         </div>
       
@@ -495,8 +497,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/05/next/start/" rel="next" title="React 同构框架 Next 入门教程一：快速开始">
-                <i class="fa fa-chevron-left"></i> React 同构框架 Next 入门教程一：快速开始
+              <a href="/2019/01/03/manjaro/" rel="next" title="Manjaro Linux 之旅">
+                <i class="fa fa-chevron-left"></i> Manjaro Linux 之旅
               </a>
             
           </div>
@@ -504,10 +506,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/05/next/share/" rel="prev" title="React 同构框架 Next 入门教程三：组件复用">
-                React 同构框架 Next 入门教程三：组件复用 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -751,7 +749,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#资源"><span class="nav-number">1.</span> <span class="nav-text">资源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#页面导航"><span class="nav-number">2.</span> <span class="nav-text">页面导航</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#实例"><span class="nav-number">1.</span> <span class="nav-text">实例</span></a></li></ol></div>
             
 
           </div>
