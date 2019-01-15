@@ -250,7 +250,7 @@
           
           <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">7</span></a>
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">8</span></a>
   </li>
         
         
@@ -371,7 +371,7 @@
                 
               
 
-              <time title="创建时间：2019-01-15 11:00:00 / 修改时间：11:41:41" itemprop="dateCreated datePublished" datetime="2019-01-15T11:00:00+08:00">2019-01-15</time>
+              <time title="创建时间：2019-01-15 11:00:00 / 修改时间：11:50:27" itemprop="dateCreated datePublished" datetime="2019-01-15T11:00:00+08:00">2019-01-15</time>
             
 
             
@@ -393,7 +393,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/工具与资源/" itemprop="url" rel="index"><span itemprop="name">工具与资源</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/系统运维/" itemprop="url" rel="index"><span itemprop="name">系统运维</span></a></span>
 
                 
                 
@@ -440,7 +440,7 @@
 <p>保存为 <code>deploy.sh</code>，存储在项目代码所在目录。</p>
 <ol start="2">
 <li><p><code>POST</code> 接口</p>
-<p> 这里使用 <code>Node</code> 实现。先安装 <code>github-webhook-handler</code> 组件，然后在项目代码所在目录创建 <code>server.js</code> 文件：</p>
+<p> 这里使用 <code>Node</code> 实现。先安装 <a href="https://github.com/rvagg/github-webhook-handler" target="_blank" rel="noopener">github-webhook-handler</a> 组件，然后在项目代码所在目录创建 <code>server.js</code> 文件：</p>
 </li>
 </ol>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>)</span><br><span class="line"><span class="keyword">var</span> createHandler = <span class="built_in">require</span>(<span class="string">'github-webhook-handler'</span>)</span><br><span class="line"><span class="keyword">var</span> handler = createHandler(&#123;</span><br><span class="line">    path: <span class="string">'/deploy'</span>, <span class="comment">// 访问路径</span></span><br><span class="line">    secret: <span class="string">'***************'</span> <span class="comment">// 密钥，在 GITHUB WEBHOOKS 配置中需要</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">runCommond</span>(<span class="params">cmd, args, callback</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> spawn = <span class="built_in">require</span>(<span class="string">'child_process'</span>).spawn;</span><br><span class="line">    <span class="keyword">var</span> child = spawn(cmd, args);</span><br><span class="line">    <span class="keyword">var</span> resp  = <span class="string">""</span>;</span><br><span class="line"></span><br><span class="line">    child.stdout.on(<span class="string">'data'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">buffer</span>) </span>&#123;</span><br><span class="line">        resp += buffer.toString();</span><br><span class="line">    &#125;);</span><br><span class="line">    child.stdout.on(<span class="string">'end'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        callback(resp)</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http.createServer(<span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">    handler(req, res, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span><br><span class="line">        res.statusCode = <span class="number">404</span></span><br><span class="line">        res.end(<span class="string">'404 ERROR.'</span>)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;).listen(<span class="number">7676</span>)</span><br><span class="line"></span><br><span class="line">handler.on(<span class="string">'error'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.error(<span class="string">'Error:'</span>, err.message)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">handler.on(<span class="string">'push'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'Received a push event for %s to %s'</span>,</span><br><span class="line">        event.payload.repository.name,</span><br><span class="line">        event.payload.ref);</span><br><span class="line">        </span><br><span class="line">    runCommond(<span class="string">'sh'</span>, [<span class="string">'./deploy.sh'</span>], <span class="function"><span class="keyword">function</span> (<span class="params">text</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(text)</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
@@ -448,8 +448,12 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ node server.js</span><br></pre></td></tr></table></figure>
 <p>开启服务后，就可以通过本地的 <code>7676</code> 端口的 <code>deploy</code> 路径执行 <code>SHELL</code> 脚本了。<br>如果服务器已经启用 <code>HTTP</code> 服务，可以通过代理跳转到 <code>NODE</code> 服务，这里以 <code>NGINX</code> 为例：</p>
 <figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">location</span> /deploy &#123;</span><br><span class="line">    <span class="attribute">proxy_pass</span> http://127.0.0.1:7676;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>假如我们的 WEB 服务地址是：<code>https://app.io</code>，那么现在就可以通过 <code>https://app.io/deploy</code> 访问到 <code>server.js</code> 服务了。</p>
+<p>假如我们的 WEB 服务地址是：<code>https://app.io</code>，那么现在就可以通过 <code>https://app.io/deploy</code> 访问到 <code>server.js</code> </p>
 <ol start="3">
+<li><code>NODE</code> 服务很容易挂掉，可以借助 <a href="https://github.com/foreverjs/forever" target="_blank" rel="noopener">foreverjs</a> 组件来实现自动重启。</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm install forever -g <span class="comment"># 安装 forever</span></span><br><span class="line"></span><br><span class="line">$ forever start server.js <span class="comment"># 启用 server.js 服务</span></span><br></pre></td></tr></table></figure>
+<ol start="4">
 <li><p>配置 GITHUB WEBHOOKS</p>
 <ul>
 <li><code>Payload URL</code> 设置为 <code>https://app.io/deploy</code>；</li>
@@ -2296,7 +2300,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
