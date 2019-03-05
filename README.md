@@ -1,5 +1,7 @@
 ## 2019
 
+2019-02-22 [浅谈 Redis 的典型应该场景（一）：分布式锁](https://github.com/dolphin836/Blog/issues/8)
+
 2019-02-22 [最好用的 Linux 发行版 ManJaro 折腾记录（二）PHP 开发环境](https://github.com/dolphin836/Blog/issues/2)
 
 2019-02-21 [最好用的 Linux 发行版 ManJaro 折腾记录（一）常用软件](https://github.com/dolphin836/Blog/issues/1)
